@@ -1,0 +1,133 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Senexic.io color palette - Dark theme with purple background */
+  --background: #0a0514;
+  /* Dark purple instead of gray */
+  --foreground: oklch(0.985 0 0);
+  --card: #0f0a1a;
+  /* Slightly lighter purple for cards */
+  --card-foreground: oklch(0.985 0 0);
+  --popover: #0f0a1a;
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --radius: 0.625rem;
+
+  /* Docusaurus-specific mappings */
+  --ifm-color-primary: #ffffff;
+  --ifm-color-primary-dark: #e6e6e6;
+  --ifm-color-primary-darker: #d9d9d9;
+  --ifm-color-primary-darkest: #b3b3b3;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.05);
+
+  --ifm-navbar-background-color: #0a0514;
+  --ifm-footer-background-color: #0a0514;
+  --ifm-background-color: #0a0514;
+  /* Dark purple background */
+  --ifm-font-color-base: #ededed;
+  /* Light gray text */
+  --ifm-heading-color: #ffffff;
+  /* White headings */
+  --ifm-link-color: #ffffff;
+  --ifm-menu-color: #ededed;
+}
+
+/* For readability in dark mode */
+[data-theme='dark'] {
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.05);
+  --ifm-background-color: #0a0a0a;
+  /* Ensure dark background */
+}
+
+/* Rounded corners and modern spacing */
+.button {
+  border-radius: 0.5rem;
+}
+
+.card {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Hero section fix - dark background with white text */
+.hero--primary {
+  --ifm-hero-background-color: #0a0514 !important;
+  --ifm-hero-text-color: #ffffff !important;
+  background-color: #0a0514 !important;
+}
+
+.hero__title {
+  color: #ffffff !important;
+}
+
+.hero__subtitle {
+  color: #ededed !important;
+}
+
+/* Mobile responsive improvements */
+@media screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem !important;
+    padding: 0 1rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__title {
+    font-size: 1.875rem !important;
+  }
+
+  .hero__subtitle {
+    font-size: 1.0625rem !important;
+  }
+}
