@@ -24,13 +24,13 @@ function HomepageHeader() {
               className="button button--secondary button--lg"
               to="/docs/architecture"
               style={{ width: '100%', maxWidth: '400px' }}>
-              Read Technical Whitepaper
+              Read Whitepaper
             </Link>
             <Link
               className="button button--outline button--secondary button--lg"
               to="/docs/aia"
               style={{ width: '100%', maxWidth: '400px' }}>
-              Explore AIA Agentsd
+              Explore AIA Agent
             </Link>
           </div>
         </div>
