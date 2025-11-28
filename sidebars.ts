@@ -16,9 +16,26 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'AIA',
+      label: 'AIA Chain',
       link: { type: 'doc', id: 'aia/index' },
-      items: [],
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Architecture',
+          items: ['aia/architecture/secure-remote'],
+        },
+        {
+          type: 'category',
+          label: 'Smart Contracts',
+          items: ['aia/contracts/overview'],
+        },
+        {
+          type: 'category',
+          label: 'Guides',
+          items: ['aia/guides/contributor-guide'],
+        },
+      ],
     },
     {
       type: 'category',
