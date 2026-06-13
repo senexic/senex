@@ -1,10 +1,11 @@
 # Roadmap & Deployment Strategy
 
-## Phase 1: Private Node Network (6 months)
-- Deploy [AIA agents](architecture/aia_agents.md) on controlled devices
-- Implement core [smart contracts](architecture/intelligent_chain.md) on Polygon testnet
-- Establish initial validator network (10-50 nodes)
-- Test privacy-preserving aggregation protocols
+## Phase 1: Local-first permissioned alpha — **shipping now (v1.0-alpha)**
+- [AIA agents](architecture/aia_agents.md) running locally with a bundled inference engine and governed RAG
+- A permissioned testnet between real nodes: signed, replay-protected, revocable messaging
+- The intelligence-economy loop end to end: **neurolink** grants → distributed computation → block-style verification → **Proof of Intel** → simulated-ASHA settlement
+- The two-traveler coordination demo: a coordinated outcome that beats the self-interested baseline with surplus-funded side payments
+- Automatic peer discovery via a company rendezvous directory (admission stays an owner decision) is the next milestone
 
 ## Phase 2: Public Testnet (6 months)
 - Open [AIA agent](architecture/aia_agents.md) beta to public participants

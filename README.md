@@ -3,12 +3,14 @@
 
 ---
 
+> **Status — vision vs. shipping today.** This document is the full architectural whitepaper *and* roadmap. **Shipping today (v1.0-alpha):** local-first AIA agents, a permissioned testnet between real nodes, and a working intelligence-economy loop (**Proof of Data** + **Proof of Computation** → **Proof of Intel**) with contribution-weighted, *simulated* rewards. The cryptographic privacy stack (differential privacy, MPC, zero-knowledge proofs) is **target design and active research**, not a current guarantee. No live token; no AGI claim.
+
 ## Executive Summary
 
-SENEX Intelligent Chain represents a cutting-edge decentralized AI architecture that integrates genome-based AI evolution, client-side secure agents, blockchain infrastructure, and mathematically provable privacy guarantees. The system enables the world's first truly decentralized, privacy-preserving AI network that scales globally while maintaining individual data sovereignty.
+SENEX Intelligent Chain is a privacy-first **intelligence economy**: local AI agents that keep your data on your device, share governed memory paths as **neurolinks**, and earn for the data and computation they actually contribute, with every contribution proven and independently verified. The design integrates GENOME (an emergent network mind), client-side secure agents, a contribution ledger, and a roadmap toward formal cryptographic privacy — so the network can grow more capable globally while individuals keep data sovereignty.
 
 ### Core Innovation
-The system provides **ZERO RISK DE-ANONYMIZATION** through differential privacy (ε=1.0, δ=1e-6), ensuring that even with infinite computational power, adversaries cannot determine individual data participation with confidence >1e-6.
+A contribution's **Proof of Data** and **Proof of Computation** fuse into a single verifiable **Proof of Intel** record that decides each participant's reward share. On the privacy roadmap, client-side **differential privacy** (design target ε=1.0, δ=1e-6) is intended to bound what any single contribution can reveal; today, privacy rests on local-first governance — raw data and locators never leave the device, and sharing is bounded and revocable.
 
 ---
 
@@ -155,25 +157,25 @@ AIA Agent → ContributionContract (submit encrypted update)
 
 ## 2. Privacy & Security Architecture
 
-### 2.1 Mathematical Privacy Guarantee
+### 2.1 Mathematical Privacy Guarantee (Target Design)
 
-**ZERO RISK DE-ANONYMIZATION**
+> **Roadmap, not a current guarantee.** Differential privacy is not yet implemented. Today, privacy is enforced by local-first governance: raw data and locators never leave the device; sharing is bounded and revocable. The model below is the design target.
 
-The system implements differential privacy with ε=1.0, δ=1e-6, providing mathematical proof that even with infinite computational power, adversaries cannot determine individual data participation with confidence >1e-6.
+The design target is client-side differential privacy with ε=1.0, δ=1e-6 — strong enough that an adversary, even with unbounded computation, gains only a negligibly bounded advantage in determining whether any single record took part.
 
 **Mathematical Formula:**
 ```
 For any two neighboring datasets D and D' (differing in one record):
 Pr[M(D) ∈ S] ≤ exp(ε) · Pr[M(D') ∈ S] + δ
 
-where M is the privacy mechanism, ε=1.0, δ=1e-6
+where M is the privacy mechanism, target ε=1.0, target δ=1e-6
 ```
 
-### 2.2 Privacy Technologies
+### 2.2 Privacy Technologies (Target Design)
 
 #### **A. Differential Privacy (DP)**
-- Applied at CLIENT LEVEL before any data leaves the device
-- Privacy Budget: ε = 1.0, δ = 1e-6 (strong privacy guarantee)
+- Designed to apply at the client level before any data leaves the device
+- Target privacy budget: ε = 1.0, δ = 1e-6
 - Mechanism: Gaussian noise calibrated to sensitivity of gradients
 - Composition: Advanced composition for multiple contributions
 
@@ -244,7 +246,7 @@ where σ = (2·ln(1.25/δ)·Δ²) / ε²
 **Attack:** Adversary attempts to reconstruct training data from model gradients
 
 **Mitigation:**
-- Differential privacy (ε=1.0) provides provable protection
+- Differential privacy (target ε=1.0) is designed to provide provable protection
 - Gradient clipping before noise addition (||g|| ≤ C)
 - Secure aggregation prevents access to individual gradients
 - Only aggregated updates available, never individual contributions
@@ -620,9 +622,9 @@ Example: If 100M ASHA staked at $0.10: $3.3M attack cost
 
 ## 9. Technical Innovation Summary
 
-This design advances beyond current decentralized AI architectures through:
+This design advances beyond current decentralized AI architectures through (★ = live in v1.0-alpha, ☆ = roadmap):
 
-1. **Mathematical Privacy Guarantees**: Provable differential privacy vs. best-effort anonymization
+1. ☆ **Mathematical Privacy Guarantees**: client-side differential privacy as the design target vs. best-effort anonymization (today: local-first governance)
 2. **Self-Evolving Governance**: AI-optimized parameter adjustment vs. static rules
 3. **Cross-Platform Agents**: Universal OS support with hardware adaptation
 4. **Pull-Based Data Sharing**: Contextual contribution vs. always-on data mining
@@ -634,4 +636,4 @@ This design advances beyond current decentralized AI architectures through:
 
 ## Conclusion
 
-The SENEX Intelligent Chain provides a complete technical specification for building the world's first truly decentralized, privacy-preserving AI network that can scale globally while maintaining individual data sovereignty and mathematical privacy guarantees. Through the integration of GENOME (decentralized AI), AIA Agents (client-side intelligence), and the Intelligent Chain (blockchain infrastructure), the system creates a sustainable ecosystem where privacy, security, and utility converge to enable the next generation of AI applications.
+The SENEX Intelligent Chain provides a complete technical specification for a decentralized, privacy-preserving AI network that can scale globally while keeping individual data sovereignty — with a working local-first permissioned alpha today and a roadmap toward formal cryptographic privacy guarantees. Through the integration of GENOME (the emergent network mind), AIA Agents (client-side intelligence), and the Intelligent Chain (the contribution ledger), the system creates a sustainable ecosystem where privacy, proven contribution, and utility converge to enable the next generation of AI applications.

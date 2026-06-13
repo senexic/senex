@@ -1,5 +1,9 @@
 # System Architecture Overview
 
+:::info Vision plus shipping status
+These three pillars describe the full SENEX design. **Live in v1.0-alpha:** local-first AIA agents, the permissioned testnet, and the intelligence-economy loop (**Proof of Data** + **Proof of Computation** → **Proof of Intel**). GENOME as a network-scale mind and the custom chain are **roadmap** — see each page for status.
+:::
+
 ## 1.1 Core Components
 
 The SENEX Intelligent Chain ecosystem is built upon three integrated pillars that function in harmony to create a decentralized, privacy-preserving AI network.

@@ -2,6 +2,10 @@
 
 Client-side secure agents running on user devices with full local data access and privacy-first design.
 
+:::info Shipping today vs. roadmap
+**Live in v1.0-alpha:** the local engine and RAG, hardware adaptation, encrypted-at-rest local storage, governed **neurolink** sharing, and signed peer messaging. The **Privacy-Preserving Contribution** pipeline below (differential privacy, secure aggregation, zero-knowledge proofs) is the **target design**, not a current feature.
+:::
+
 ## Key Features
 - **Cross-platform compatibility** (Windows, macOS, Linux, iOS, Android)
 - **Full local data access** with RAG (Retrieval-Augmented Generation) capabilities
@@ -25,9 +29,9 @@ Client-side secure agents running on user devices with full local data access an
 5. Submit encrypted query to [blockchain](intelligent_chain.md) via smart contract
 6. Receive result and post-process locally
 
-### Privacy-Preserving Contribution
+### Privacy-Preserving Contribution (Roadmap)
 - **Gradient Computation**: Calculate model gradients on local data
-- **Differential Privacy**: Add calibrated Gaussian noise (ε=1.0, δ=1e-6)
+- **Differential Privacy**: Add calibrated Gaussian noise (target ε=1.0, δ=1e-6)
 - **Secure Aggregation**: Use secure multi-party computation protocol
 - **Anonymous Submission**: Submit through mixnet or onion routing
 - **Zero-Knowledge Proofs**: Prove computation correctness without revealing data

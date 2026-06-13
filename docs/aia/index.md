@@ -1,6 +1,6 @@
 # AIA Chain Documentation
 
-Welcome to the technical documentation for **AIA Chain** - the world's first truly decentralized AI inference network built on the SENEX Intelligent Chain.
+Welcome to the technical documentation for **AIA Chain** - a decentralized AI inference network built on the SENEX Intelligent Chain.
 
 ## What is AIA Chain?
 
@@ -15,9 +15,10 @@ AIA Chain is a permissionless, blockchain-based AI inference network that enable
 Choose your path:
 
 - **[For Contributors](./guides/contributor-guide.md)** - Submit AI inference requests and earn reputation
-- **[For Validators](./guides/validator-guide.md)** - Run a validator node and earn rewards
 - **[Smart Contracts](./contracts/overview.md)** - Understand the on-chain architecture
-- **[Security](./security/encryption.md)** - Learn about our privacy architecture
+- **[Secure Remote Architecture](./architecture/secure-remote.md)** - How data privacy is achieved
+
+> Validator, installation, and configuration guides are in progress.
 
 ## Key Features
 
@@ -53,16 +54,12 @@ graph LR
 
 ## Getting Started
 
-1. **[Installation](./guides/installation.md)** - Set up the AIA Chain application
-2. **[Configuration](./guides/configuration.md)** - Configure your environment
-3. **[First Request](./guides/first-request.md)** - Submit your first AI inference request
+Installation, configuration, and first-request guides are in progress. Start with the [Contributor Guide](./guides/contributor-guide.md).
 
 ## Technical Deep Dives
 
-- **[Secure Remote Architecture](./architecture/secure-remote.md)** - How we achieve data privacy
-- **[Cryptography](./security/cryptography.md)** - Browser-native encryption implementation
-- **[Smart Contract Design](./contracts/design.md)** - On-chain logic and economics
-- **[Validator Rewards](./economics/validator-rewards.md)** - Reward calculation mechanics
+- **[Secure Remote Architecture](./architecture/secure-remote.md)** - How data privacy is achieved
+- **[Smart Contracts Overview](./contracts/overview.md)** - On-chain logic and economics
 
 ## Community
 

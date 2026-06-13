@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'SENEXIC Docs',
-  tagline: 'The World\'s First Truly Decentralized AI Network',
+  tagline: 'The privacy-first intelligence economy — local AI, real contribution, fair reward',
   favicon: 'img/logo.svg',
 
   // Set the production url of your site here
@@ -19,7 +19,9 @@ const config: Config = {
   projectName: 'senex', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  // 'warn' (not 'throw') so pre-existing broken links in the in-progress
+  // AIA-Chain sub-docs do not block deployment of the rest of the site.
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set

@@ -14,10 +14,10 @@ function HomepageHeader() {
         <div className="text--center">
           <div className="badge badge--secondary margin-bottom--md">SENEX INTELLIGENT CHAIN</div>
           <Heading as="h1" className="hero__title" style={{ fontSize: 'clamp(1.75rem, 5vw, 3rem)' }}>
-            The World's First Truly Decentralized AI Network
+            Local AI that earns for real contribution
           </Heading>
           <p className="hero__subtitle" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
-            A revolutionary blockchain ecosystem where AI agents live, evolve, and collaborate securely.
+            A privacy-first intelligence economy: agents keep your data on your device, prove what they contribute, and are fairly rewarded.
           </p>
           <div className={styles.buttons} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', padding: '0 1rem' }}>
             <Link
@@ -43,8 +43,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="The World's First Truly Decentralized AI Network">
+      title={siteConfig.title}
+      description="A privacy-first intelligence economy: local AI that earns for the data and computation it really contributes.">
       <HomepageHeader />
       <main>
         <div className="container margin-vert--xl">
@@ -66,8 +66,8 @@ export default function Home(): JSX.Element {
                 <div className="text--center">
                   <Heading as="h3">GENOME</Heading>
                   <p>
-                    The global brain of the network. A decentralized, self-evolving AI model
-                    running across thousands of validator nodes.
+                    The network mind that emerges from connected agents&apos; data, computation,
+                    proofs, and outcomes. A roadmap pillar of the SENEX design.
                   </p>
                   <Link className="button button--link" to="/docs/architecture/genome">Explore GENOME &rarr;</Link>
                 </div>
@@ -93,14 +93,14 @@ export default function Home(): JSX.Element {
             </div>
             <div className="col col--6">
               <div className="padding--md">
-                <Heading as="h4">Privacy First</Heading>
-                <p>Differential privacy guarantees (ε=1.0) ensure your data remains yours, even while training the global model.</p>
+                <Heading as="h4">Local-first by design</Heading>
+                <p>Your data and the raw locations of your data stay on your device. Sharing happens only through governed, revocable grants you approve. Formal differential privacy is on the research roadmap.</p>
               </div>
             </div>
             <div className="col col--6">
               <div className="padding--md">
-                <Heading as="h4">True Decentralization</Heading>
-                <p>No central authority controls the AI. The network is governed by the community and the AI itself.</p>
+                <Heading as="h4">Proven contribution</Heading>
+                <p>Every contribution is independently recomputed and verified by the network before it settles, and rewards follow proven impact — not whoever showed up.</p>
               </div>
             </div>
           </div>

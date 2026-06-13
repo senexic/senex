@@ -1,5 +1,9 @@
 # Security Threat Model & Mitigations
 
+:::info Threat model covers the full design; some mitigations are roadmap
+This is the threat model for the complete SENEX architecture. Mitigations that depend on the cryptographic stack (differential privacy, secure multi-party computation, zero-knowledge proofs) describe the **target design**, not v1.0-alpha behavior. What is enforced today: permissioned admission, signed and replay-protected messaging, governed/revocable **neurolink** sharing, full-node re-execution (block-style verification) with slashing of nodes that submit false results, and a bearer-token-protected local API.
+:::
+
 ## THREAT 1: Data Poisoning Attacks
 **Attack:** Malicious clients submit crafted gradients to degrade model performance
 
@@ -13,7 +17,7 @@
 **Attack:** Adversary attempts to reconstruct training data from model gradients
 
 **Mitigation:**
-- [Differential privacy](mathematical_guarantees.md) (ε=1.0) provides provable protection
+- [Differential privacy](mathematical_guarantees.md) (target ε=1.0) is designed to provide provable protection
 - Gradient clipping before noise addition (||g|| ≤ C)
 - Secure aggregation prevents access to individual gradients
 - Only aggregated updates available, never individual contributions
@@ -22,7 +26,7 @@
 **Attack:** Determine if specific data point was in training set
 
 **Mitigation:**
-- [Differential privacy](mathematical_guarantees.md) fundamentally prevents this (δ = 1e-6)
+- [Differential privacy](mathematical_guarantees.md) is designed to fundamentally prevent this (target δ = 1e-6)
 - Model checkpoints versioned, old versions retired
 - Privacy budget tracking per client across all contributions
 

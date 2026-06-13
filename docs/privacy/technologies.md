@@ -1,8 +1,12 @@
-# Privacy Technologies
+# Privacy Technologies (Target Design)
+
+:::warning Design and research roadmap
+The cryptographic mechanisms on this page describe the **privacy architecture SENEX is building toward**, not features shipping in v1.0-alpha. Today, privacy is enforced by local-first governance (raw data and locators never leave the device; bounded, revocable **neurolink** sharing). Treat the parameters below as design targets.
+:::
 
 ## A. Differential Privacy (DP)
-- **Applied at CLIENT LEVEL** before any data leaves the device
-- **Privacy Budget**: ε = 1.0, δ = 1e-6 (strong privacy guarantee)
+- **Designed to apply at the client level** before any data leaves the device
+- **Target privacy budget**: ε = 1.0, δ = 1e-6
 - **Mechanism**: Gaussian noise calibrated to sensitivity of gradients
 - **Composition**: Advanced composition for multiple contributions
 
