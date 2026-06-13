@@ -1,5 +1,9 @@
 # Applications & Use Cases
 
+:::info Illustrative directions
+These examples illustrate where the SENEX design is headed. They combine shipped capabilities (local-first processing, governed sharing) with roadmap ones (MPC aggregation, network-scale GENOME). Compliance references are design goals, not certifications.
+:::
+
 ## Pull-Based Contextual Services
 
 ### Navigation Example

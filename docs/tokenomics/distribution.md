@@ -1,5 +1,9 @@
 # Initial Distribution
 
+:::danger Design model — no live token sale
+These allocations describe a **proposed design**. ASHA is a simulated accounting unit, **not a live or tradeable token**; **no ICO or sale is live or open**, and nothing here is an offer or solicitation. Figures are illustrative and subject to change.
+:::
+
 ## 15% ICO (99,900,000 ASHA)
 
 ### Private ICO: 3% (19,980,000 ASHA) at 30 ASHA = 1 MATIC

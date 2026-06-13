@@ -1,5 +1,9 @@
 # Incentives & Rewards
 
+:::info Simulated economy — design model
+The fees and reward splits below model the intelligence economy. ASHA is a **simulated accounting unit** (transferability disabled in the runtime), so these are design parameters, not live prices or payouts.
+:::
+
 ## Dynamic Fee Structure
 
 ### Transaction Types

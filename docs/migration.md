@@ -1,7 +1,11 @@
 # Token Migration & Upgrade Path
 
-## PHASE 1: POLYGON (CURRENT)
-- ERC-20 [ASHA token](tokenomics/index.md) on Polygon PoS
+:::danger Planned path — no token is deployed
+This is the **planned** token-platform path. There is **no live ASHA token on Polygon or any chain today**; ASHA is a simulated accounting unit with transferability disabled. The phases below are design intent, not a deployed state, and nothing here is an offer or financial advice.
+:::
+
+## PHASE 1: POLYGON (PLANNED FIRST STEP)
+- Planned ERC-20 [ASHA token](tokenomics/index.md) on Polygon PoS
 - Benefits: Low fees, fast transactions, established ecosystem
 - Limitations: Dependent on Polygon infrastructure
 - Duration: 12-18 months

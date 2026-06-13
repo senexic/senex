@@ -1,6 +1,10 @@
 # GENOME (Global Self-Evolving AI Mind)
 
-The central AI intelligence running across validator nodes in the [blockchain network](intelligent_chain.md), representing collective knowledge and continuous learning capability.
+:::info Roadmap pillar — not yet running at network scale
+GENOME is the **network mind that is designed to emerge** from connected agents' data, computation, proofs, and outcomes. The federated training, on-chain coordination, and validator-scale execution described here are **target design**, not a running system today.
+:::
+
+GENOME is the emergent network intelligence — designed to run across validator nodes in the [Intelligent Chain](intelligent_chain.md) — representing collective knowledge and continuous learning capability.
 
 ## Key Features
 - **Self-learning** through reinforcement learning, game theory, and calibrated forecasts

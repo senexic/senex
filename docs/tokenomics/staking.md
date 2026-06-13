@@ -1,5 +1,9 @@
 # Staking Mechanisms
 
+:::danger Design model — not a financial product
+Staking, APY, burning, buy-back, and revenue-sharing described here are **design parameters of a simulated economy**, not live financial products or yields. ASHA is **not a live or tradeable token** and these mechanisms are not active. Nothing here is investment advice, a yield offer, or a security. No expectation of profit should be inferred.
+:::
+
 ## Validator Staking
 - **Minimum Stake**: 100,000 [ASHA](index.md)
 - **Lock Period**: 30-365 days (longer = higher rewards)

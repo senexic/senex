@@ -1,5 +1,9 @@
 # Scalability & Performance
 
+:::info Targets, not measured results
+The numbers below are **design targets** for the full network, not measured production figures. Today's alpha runs a local-first agent and a permissioned multi-node testnet.
+:::
+
 ## Computational Distribution
 
 ### On-Chain Operations

@@ -1,5 +1,9 @@
 # Governance Model
 
+:::info Design model — simulated token
+This describes the intended governance design. Token-holder governance references the **simulated** ASHA unit (not live or tradeable); these mechanisms are not yet active on a live network.
+:::
+
 ## Hybrid DAO Structure
 
 ### Token Holder Governance

@@ -1,6 +1,10 @@
 # INTELLIGENT CHAIN (Blockchain Infrastructure)
 
-Custom blockchain network optimized for AI computation, data coordination, and token economics.
+:::info Shipping today vs. roadmap
+**Today (v1.0-alpha):** a contribution ledger where every node recomputes and verifies each iteration and seals a hash-chained record before settlement (block-style verification). The custom Layer 1, Polygon phase, ERC-20 token, and Proof-of-Contribution consensus described below are **roadmap design**, not deployed. ASHA accounting is simulation-only.
+:::
+
+A contribution ledger and (on the roadmap) a custom blockchain network optimized for AI computation, data coordination, and the simulated token economy.
 
 ## Architecture
 

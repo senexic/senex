@@ -2,6 +2,10 @@
 
 Welcome to the technical documentation for **AIA Chain** - a decentralized AI inference network built on the SENEX Intelligent Chain.
 
+:::note Early MVP experiment — distinct from the shipped AIA product
+AIA Chain is an early **proof-of-concept** for permissionless, browser-native AI inference. The shipped AIA product (the local-first agent and the intelligence-economy loop documented elsewhere on this site, and downloadable from senexic.io) has since evolved well beyond this experiment. These pages are kept for reference and may not reflect the current product.
+:::
+
 ## What is AIA Chain?
 
 AIA Chain is a permissionless, blockchain-based AI inference network that enables:

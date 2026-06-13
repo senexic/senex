@@ -127,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} SENEXIC. Built with Docusaurus.`,
+      copyright: `Copyright © 2021 SENEXIC Intelligent Chain. The SENEX design dates from 2021.`,
     },
     prism: {
       theme: prismThemes.github,
