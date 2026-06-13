@@ -19,7 +19,7 @@ A contribution's **Proof of Data** and **Proof of Computation** fuse into a sing
 ### 1.1 Core Components
 
 #### **GENOME (Global Self-Evolving AI Mind)**
-The central AI intelligence running across validator nodes in the blockchain network, representing collective knowledge and continuous learning capability.
+The emergent network intelligence — designed to run across validator nodes — representing collective knowledge and continuous learning capability. *(Roadmap: GENOME is not yet running at network scale; the federated training and validator-scale execution described here are target design.)*
 
 **Key Features:**
 - Self-learning through reinforcement learning, game theory, and calibrated forecasts
@@ -307,11 +307,13 @@ where σ = (2·ln(1.25/δ)·Δ²) / ε²
 
 ### 2.4 Privacy Compliance & Guarantees
 
-**Regulatory Compliance:**
-- ✓ **GDPR (EU)**: Data minimization, purpose limitation, right to erasure
-- ✓ **CCPA (California)**: Consumer data rights, opt-out capability
-- ✓ **HIPAA (Healthcare)**: PHI protection via local-only processing
-- ✓ **COPPA (Children)**: Age-gated features, parental consent flows
+> **Design goals, not certifications.** The frameworks below are compliance goals the architecture is designed toward. Local-first data handling makes them achievable, but no formal certification has been completed.
+
+**Regulatory Compliance (design goals):**
+- **GDPR (EU)**: Data minimization, purpose limitation, right to erasure
+- **CCPA (California)**: Consumer data rights, opt-out capability
+- **HIPAA (Healthcare)**: PHI protection via local-only processing
+- **COPPA (Children)**: Age-gated features, parental consent flows
 
 **Client Opt-In/Opt-Out:**
 - Granular Controls: Per-domain contribution settings (health, finance, etc.)
@@ -322,6 +324,8 @@ where σ = (2·ln(1.25/δ)·Δ²) / ε²
 ---
 
 ## 3. Tokenomics & Incentive Model
+
+> **⚠️ Not a live token — simulation and design only.** ASHA is a **simulated accounting unit** used to model the intelligence economy. It is **not a live, transferable, or tradeable token**. There is **no live ICO or token sale**. Nothing in this section is an offer to buy or sell, a solicitation, investment or financial advice, or a security. Every figure (ICO pricing, APY, supply, burns, buy-backs) describes a **design model** subject to change. In the shipping runtime, ASHA accounting is simulation-only with transferability disabled.
 
 ### 3.1 ASHA Token Economics
 
@@ -439,11 +443,13 @@ Quality Score = w₁·Accuracy + w₂·Uniqueness + w₃·Relevance + w₄·Volu
 - Voting rewards: 0.1-1% APY for active participation
 - Proposal bond: 100-1000 ASHA (returned if passed)
 
-### 3.6 Value Accrual Mechanisms
+### 3.6 Value Accrual Mechanisms (design model)
 
-#### **Token Burning:**
+> These are **modeled mechanisms of a simulated economy**, not active financial features, and imply no expectation of profit. ASHA is not a live or tradeable token.
+
+#### **Token Burning (modeled):**
 - 10% of all transaction fees burned permanently
-- Deflationary pressure increases token value over time
+- Modeled to apply deflationary pressure within the simulated economy
 - Target: Reduce supply by 50% over 10 years
 
 #### **Buy-Back Program:**
@@ -470,7 +476,7 @@ Example: If 100M ASHA staked at $0.10: $3.3M attack cost
 **Expected Gain from Attack:**
 - Manipulate model: Limited benefit (caught quickly, stake slashed)
 - Steal rewards: Maximum 1 epoch (then slashed)
-- Extract data: Impossible (differential privacy prevents)
+- Extract data: prevented by local-first governance today; the differential-privacy design target would extend this to contribution traces
 
 **Result:** Attack cost >> Expected gain (economically secure)
 
@@ -507,7 +513,7 @@ Example: If 100M ASHA staked at $0.10: $3.3M attack cost
 5. Contributors rewarded based on data utility
 
 #### **Healthcare Predictions:**
-- Local health data processing (HIPAA compliant)
+- Local health data processing (designed toward HIPAA goals)
 - Encrypted symptom pattern sharing
 - Population-level disease prediction
 - Individual risk assessment without data exposure
@@ -593,7 +599,9 @@ Example: If 100M ASHA staked at $0.10: $3.3M attack cost
 
 ## 8. Token Migration & Upgrade Path
 
-### **PHASE 1: POLYGON (CURRENT)**
+> **Planned path — no token is deployed.** There is no live ASHA token on Polygon or any chain today; ASHA is a simulated accounting unit with transferability disabled. The phases below are design intent, not a deployed state.
+
+### **PHASE 1: POLYGON (PLANNED FIRST STEP)**
 - ERC-20 ASHA token on Polygon PoS
 - Benefits: Low fees, fast transactions, established ecosystem
 - Limitations: Dependent on Polygon infrastructure
@@ -637,3 +645,7 @@ This design advances beyond current decentralized AI architectures through (★ 
 ## Conclusion
 
 The SENEX Intelligent Chain provides a complete technical specification for a decentralized, privacy-preserving AI network that can scale globally while keeping individual data sovereignty — with a working local-first permissioned alpha today and a roadmap toward formal cryptographic privacy guarantees. Through the integration of GENOME (the emergent network mind), AIA Agents (client-side intelligence), and the Intelligent Chain (the contribution ledger), the system creates a sustainable ecosystem where privacy, proven contribution, and utility converge to enable the next generation of AI applications.
+
+---
+
+© 2021 SENEX Intelligent Chain. The SENEX design dates from 2021. This document is a vision-and-roadmap whitepaper; see the per-section status notes for what ships in the current alpha. Nothing herein is an offer, financial advice, or a security.
