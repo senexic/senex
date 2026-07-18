@@ -123,7 +123,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} SENEXIC. Public
+      copyright: `Copyright © 2022 SENEXIC. Public
       capability and status documentation.`,
     },
     prism: {
