@@ -1,41 +1,45 @@
-# GENOME (Global Self-Evolving AI Mind)
+# GENOME: Collective Intelligence Research
 
-:::info Roadmap pillar — not yet running at network scale
-GENOME is the **network mind that is designed to emerge** from connected agents' data, computation, proofs, and outcomes. The federated training, on-chain coordination, and validator-scale execution described here are **target design**, not a running system today.
+GENOME is SENEX’s long-horizon research direction: investigating whether independently controlled AIA participants can cooperate to produce useful shared intelligence without collapsing ownership, consent, or accountability into a central system.
+
+:::note Research direction
+GENOME is post-V1 research. It is not a deployed network mind, a current shared model, an implemented training pipeline, or a claim of artificial general intelligence.
 :::
 
-GENOME is the emergent network intelligence — designed to run across validator nodes in the [Intelligent Chain](intelligent_chain.md) — representing collective knowledge and continuous learning capability.
+## Research question
 
-## Key Features
-- **Self-learning** through reinforcement learning, game theory, and calibrated forecasts
-- **Decentralized execution** across validator nodes
-- **Privacy-preserving federated learning aggregation**
-- **Multi-domain expertise**: healthcare, finance, disaster prediction, navigation
+Personal agents can develop context that is valuable to their users, but isolated systems cannot always solve problems that depend on diverse experience or coordinated action. GENOME asks whether a network can combine selected, governed contributions into better outcomes while preserving the autonomy of each participant.
 
-## Technical Components
+The public research goals are:
 
-### Model Architecture
-- **Base**: Large-scale transformer with domain-specific heads
-- **Federated Learning Core**: Aggregates encrypted gradients from [AIA agents](aia_agents.md)
-- **Reinforcement Learning Module**: RLHF (Reinforcement Learning from Human Feedback)
-- **Game-Theoretic Optimizer**: Balances competing objectives (accuracy vs. privacy)
-- **Calibration Layer**: Ensures well-calibrated probabilistic predictions
+- **Useful composition:** determine when combining independent contributions materially improves an outcome.
+- **Participant control:** preserve each participant’s authority over whether and how they take part.
+- **Bounded disclosure:** minimize what cooperation reveals about a participant or their private context.
+- **Accountable results:** retain enough evidence to examine how a shared result was produced and challenged.
+- **Safe adaptation:** prevent experimental collective behavior from silently changing user permissions or product guarantees.
 
-### Training Pipeline
-1. Collect encrypted model updates from [AIA agents](aia_agents.md) via smart contracts
-2. Apply secure multi-party computation (MPC) to aggregate gradients
-3. Update global model parameters with differential privacy guarantees
-4. Validate updates through consensus mechanism
-5. Distribute updated model to validator nodes
-6. Optionally push selective updates to AIA agents (pull-based)
+These are desired properties, not claims that a particular mechanism has achieved them.
 
-### Storage & State Management
-- **Model Weights**: Distributed across IPFS with blockchain pointers
-- **Training Metadata**: On-chain storage (epochs, loss metrics, version hashes)
-- **Contribution Records**: Smart contract ledger of all client contributions
-- **Model Checkpoints**: Versioned snapshots for rollback capability
+## Relationship to AIA and V1
 
-### Computational Resources
-- **On-Chain**: Smart contract coordination, validation, incentive distribution
-- **Off-Chain**: Heavy computation on validator nodes with proof submission
-- **Hybrid**: Critical aggregation steps use verifiable computation (zk-SNARKs)
+[AIA](aia_agents.md) is the local-first working foundation. The future [V1-testnet](intelligent_chain.md) is intended to test coordination and accountability with test-only value. A possible V1 network would be a separate, fresh-genesis production system considered only after testnet evidence and review.
+
+GENOME begins beyond those milestones. It depends on mature identity, authorization, provenance, dispute handling, and operational safeguards. Keeping it post-V1 prevents an ambitious research thesis from being presented as a dependency of the initial product or network.
+
+## What public documentation will cover
+
+SENEX can publish:
+
+- the user problem being investigated;
+- the trust boundaries and consent expectations;
+- evaluation criteria and limitations;
+- aggregate, reproducible findings where disclosure is safe; and
+- the distinction between laboratory results and production evidence.
+
+Public documentation will not disclose security-sensitive coordination methods, internal model design, contribution scoring, network topology, training procedures, or other details that could enable reconstruction or weaken later assessment.
+
+:::warning External validation required
+Claims about privacy, robustness, fairness, emergent capability, or resistance to manipulation require independent evaluation. Research results must be bounded to the conditions in which they were measured and must not be generalized into an AGI claim.
+:::
+
+GENOME should therefore be read as a disciplined research agenda: a question SENEX intends to investigate after its local and network foundations are established, not a feature available today.

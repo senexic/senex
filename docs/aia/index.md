@@ -1,72 +1,54 @@
-# AIA Chain Documentation
+---
+title: AIA Chain research archive
+description: Historical context for an early SENEX research prototype.
+---
 
-Welcome to the technical documentation for **AIA Chain** - a decentralized AI inference network built on the SENEX Intelligent Chain.
+# AIA Chain research archive
 
-:::note Early MVP experiment — distinct from the shipped AIA product
-AIA Chain is an early **proof-of-concept** for permissionless, browser-native AI inference. The shipped AIA product (the local-first agent and the intelligence-economy loop documented elsewhere on this site, and downloadable from senexic.io) has since evolved well beyond this experiment. These pages are kept for reference and may not reflect the current product.
+:::caution Historical experiment
+This section records the purpose of an early browser-based research prototype.
+It is **not** the current AIA product, an active public service, a live
+blockchain, or a token network. Previous setup instructions and implementation
+specifications have been retired because they no longer describe the current
+system.
 :::
 
-## What is AIA Chain?
+## What the experiment explored
 
-AIA Chain is a permissionless, blockchain-based AI inference network that enables:
-- **Secure, encrypted AI inference** for contributors
-- **Transparent, permissionless validation** with economic incentives
-- **Privacy-preserving communication** using end-to-end encryption
-- **Browser-native AI models** powered by WebLLM
+AIA Chain examined whether independently operated participants could coordinate
+AI work while keeping requests protected in transit and recording contribution
+outcomes in a shared test environment. It helped SENEXIC study several enduring
+questions:
 
-## Quick Start
+- How can an owner explicitly authorize a participant or device?
+- How can a contribution be attributed without treating every participant as
+  equally useful?
+- How should a system distinguish transport security from the trust placed in
+  the participant performing a task?
+- How can experimental accounting remain clearly separate from live financial
+  value?
 
-Choose your path:
+The prototype was deliberately limited. Its browser workflow, test-network
+assumptions, and experimental coordination model are not a supported path to
+the current product.
 
-- **[For Contributors](./guides/contributor-guide.md)** - Submit AI inference requests and earn reputation
-- **[Smart Contracts](./contracts/overview.md)** - Understand the on-chain architecture
-- **[Secure Remote Architecture](./architecture/secure-remote.md)** - How data privacy is achieved
+## What carried forward
 
-> Validator, installation, and configuration guides are in progress.
+The current AIA direction retains the high-level principles that proved useful:
 
-## Key Features
+- local-first operation around the owner;
+- explicit, revocable authority;
+- governed knowledge instead of unrestricted collection;
+- evidence and verification before contribution is recognized; and
+- honest separation between working foundations and future network goals.
 
-### 🔐 End-to-End Encryption
-All contributor messages are encrypted using RSA-OAEP before being submitted to the blockchain. Only the targeted validator can decrypt and process the request.
+The underlying implementation has evolved. This archive does not describe its
+interfaces, security construction, infrastructure, or operating parameters.
 
-### ⚡ Permissionless Validation
-Anyone can become a validator. No registration, no staking required. Payment is based on:
-- **Speed** - Faster compute time = higher reward
-- **Quality** - Higher accuracy score = higher reward
-- **Consensus** - Agreement with peer validators = bonus
+## Current documentation
 
-### 🌐 Browser-Native AI
-Validators run AI models directly in the browser using WebLLM, ensuring:
-- No server dependencies
-- Complete decentralization
-- Transparent execution
-
-### 💰 Fair Economic Model
-Contributors pay a small fee per request, which is distributed to validators based on performance metrics.
-
-## Architecture Overview
-
-```mermaid
-graph LR
-    A[Contributor] -->|Encrypted Request| B[Blockchain]
-    B -->|Event| C[Validator]
-    C -->|AI Inference| D[WebLLM]
-    D -->|Response| C
-    C -->|Encrypted Response| B
-    B -->|Poll| A
-```
-
-## Getting Started
-
-Installation, configuration, and first-request guides are in progress. Start with the [Contributor Guide](./guides/contributor-guide.md).
-
-## Technical Deep Dives
-
-- **[Secure Remote Architecture](./architecture/secure-remote.md)** - How data privacy is achieved
-- **[Smart Contracts Overview](./contracts/overview.md)** - On-chain logic and economics
-
-## Community
-
-- **GitHub**: [senexic/aia](https://github.com/senexic/aia)
-- **Website**: [senexic.io](https://senexic.io)
-- **Docs**: [docs.senexic.io](https://docs.senexic.io)
+- [AIA product direction](../architecture/aia_agents.md)
+- [System architecture](../architecture/index.md)
+- [Trust and privacy](../privacy/index.md)
+- [Current status and roadmap](../roadmap.md)
+- [Contribution-economy research](../tokenomics/index.md)

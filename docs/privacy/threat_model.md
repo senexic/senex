@@ -1,77 +1,60 @@
-# Security Threat Model & Mitigations
+# Security Threat Model
 
-:::info Threat model covers the full design; some mitigations are roadmap
-This is the threat model for the complete SENEX architecture. Mitigations that depend on the cryptographic stack (differential privacy, secure multi-party computation, zero-knowledge proofs) describe the **target design**, not v1.0-alpha behavior. What is enforced today: permissioned admission, signed and replay-protected messaging, governed/revocable **neurolink** sharing, full-node re-execution (block-style verification) with slashing of nodes that submit false results, and a bearer-token-protected local API.
+This public threat model identifies the classes of risk SENEX considers and the trust boundaries where they arise. It intentionally avoids operational details that could help an attacker reproduce the system, target a control, or infer an internal security design.
+
+:::info Working foundation
+Current work focuses on the AIA user environment, local context boundaries, deliberate sharing, and safe software behavior. Control coverage is still being developed and has not received comprehensive independent validation.
 :::
 
-## THREAT 1: Data Poisoning Attacks
-**Attack:** Malicious clients submit crafted gradients to degrade model performance
+## Assets to protect
 
-**Mitigation:**
-- Byzantine-robust aggregation (Krum, Trimmed Mean, Median)
-- Reputation system: Track contribution quality over time
-- Outlier detection: Statistical tests on gradient distributions
-- Slashing: Penalize validators who accept obvious poisoned data
+The public model prioritizes:
 
-## THREAT 2: Model Inversion Attacks
-**Attack:** Adversary attempts to reconstruct training data from model gradients
+- personal source material and derived sensitive information;
+- user permissions, identity, and account control;
+- the integrity of AIA actions and displayed results;
+- the authenticity of approved exchanges;
+- future network records and governance decisions; and
+- the availability of recovery, revocation, and challenge paths.
 
-**Mitigation:**
-- [Differential privacy](mathematical_guarantees.md) (target ε=1.0) is designed to provide provable protection
-- Gradient clipping before noise addition (||g|| ≤ C)
-- Secure aggregation prevents access to individual gradients
-- Only aggregated updates available, never individual contributions
+## Threat categories
 
-## THREAT 3: Membership Inference Attacks
-**Attack:** Determine if specific data point was in training set
+### User environment compromise
 
-**Mitigation:**
-- [Differential privacy](mathematical_guarantees.md) is designed to fundamentally prevent this (target δ = 1e-6)
-- Model checkpoints versioned, old versions retired
-- Privacy budget tracking per client across all contributions
+Malware, account takeover, unsafe extensions, insecure backups, physical access, or misconfiguration may expose local context or authorize actions without meaningful user intent. Local-first architecture reduces central collection but cannot make a compromised device trustworthy.
 
-## THREAT 4: Sybil Attacks
-**Attack:** Single entity creates many fake identities to gain influence
+### Excessive or misleading permission
 
-**Mitigation:**
-- Proof-of-Stake: Requires token stake for validator participation
-- Identity verification for high-value contributors (optional tier)
-- Reputation weighting: New contributors have lower influence
-- Economic disincentive: Costs more to attack than potential gain
+A request may be too broad, unclear, persistent, or unrelated to the user’s expected purpose. Sensitive inferences can also escape even if raw source material does not. Controls should favor understandable scope, minimum disclosure, and visible continuing access.
 
-## THREAT 5: Inference Attacks on Encrypted Data
-**Attack:** Pattern analysis on encrypted communications or timing attacks
+### Untrusted recipient
 
-**Mitigation:**
-- Mixnet/onion routing eliminates network-level tracking
-- Randomized submission times (uniform distribution over time window)
-- Dummy traffic to obscure real contributions
-- Constant-time operations to prevent timing side-channels
+An approved recipient may retain, combine, misrepresent, or redistribute information. Technical revocation cannot force an independent recipient to forget information already received. The primary defenses are minimization, recipient clarity, and accountability before disclosure.
 
-## THREAT 6: Malicious Validators
-**Attack:** Compromised validators attempt to learn client data or manipulate results
+### Software and update compromise
 
-**Mitigation:**
-- MPC threshold: Requires ⌈2N/3⌉ honest validators (Byzantine fault tolerance)
-- Secret sharing: No single validator sees complete information
-- Slashing: Validators lose stake if caught cheating
-- Verifiable computation: ZK proofs ensure correct execution
+Defects, malicious dependencies, unsafe releases, or compromised update channels may change how data is processed. Release provenance, constrained privileges, testing, rollback readiness, and incident response are required assurance areas; implementation details remain private.
 
-## THREAT 7: Smart Contract Vulnerabilities
-**Attack:** Exploit bugs in smart contracts to steal tokens or manipulate model
+### Network manipulation
 
-**Mitigation:**
-- Formal verification of mission-critical contracts
-- Multi-signature governance for contract upgrades
-- Bug bounty program (10% of TVL reserved)
-- Gradual rollout: Testnet → limited mainnet → full deployment
-- Circuit breakers: Auto-pause on anomalous activity
+Future participants may submit misleading events, replay prior actions, create conflicting views, coordinate dishonestly, or interfere with service. V1-testnet is intended to examine these behaviors without attaching real monetary value.
 
-## THREAT 8: Collusion Between Clients and Validators
-**Attack:** Coordinated attack to manipulate model or steal rewards
+### Privacy leakage through metadata or results
 
-**Mitigation:**
-- Economic game theory: Defection more profitable than cooperation
-- Random validator assignment per aggregation round
-- Reputation slashing for detected collusion patterns
-- Whistleblower rewards from slashed stakes
+Timing, frequency, identity relationships, error behavior, and derived outputs may reveal information even when content is protected. Privacy review must cover the complete observable system, not only stored payloads.
+
+### Governance and operator abuse
+
+Privileged parties may make unauthorized changes, hide incidents, or apply policy inconsistently. Change transparency, separation of duties, reviewable decisions, and bounded emergency authority are governance requirements.
+
+:::caution V1-testnet target
+Network defenses are future production-candidate tests. V1-testnet is not a live public blockchain or a production security guarantee, and its test-only value carries no financial rights.
+:::
+
+## Assurance boundary
+
+Threats are tracked internally with implementation-specific scenarios, control ownership, test evidence, and remediation status. Public pages disclose categories and user-relevant limitations without publishing exploit paths, thresholds, topology, or control internals.
+
+:::warning External validation required
+Independent security assessment, adversarial testing, and deployment review are required before V1. No system can promise zero risk, and post-V1 [GENOME research](../architecture/genome.md) would require a new threat model rather than inheriting V1 assurances.
+:::

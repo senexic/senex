@@ -1,44 +1,63 @@
-# Staking Mechanisms
+# Participation Commitments
 
-:::danger Design model — not a financial product
-Staking, APY, burning, buy-back, and revenue-sharing described here are **design parameters of a simulated economy**, not live financial products or yields. ASHA is **not a live or tradeable token** and these mechanisms are not active. Nothing here is investment advice, a yield offer, or a security. No expectation of profit should be inferred.
+:::info Legacy route, revised scope
+SENEX does not offer staking, delegated staking, yield, revenue sharing, token burning, buy-backs, or a governance return. ASHA is simulated, test-only, and has no monetary value. This page now documents the research question behind operator commitments rather than a financial product.
 :::
 
-## Validator Staking
-- **Minimum Stake**: 100,000 [ASHA](index.md)
-- **Lock Period**: 30-365 days (longer = higher rewards)
-- **APY**: 5-15% (dynamic based on network needs)
+Future shared services may need a way for participants to make verifiable commitments and face proportionate consequences when they fail them. Whether that requires any economic mechanism is an open research decision.
 
-**Slashing Conditions:**
-- Downtime > 10%: -5% stake
-- Model poisoning: -50% stake
-- Byzantine behavior: -100% stake
+## Status
 
-## Delegated Staking
-- **Minimum**: 100 [ASHA](index.md)
-- **Commission**: 5-20% (set by validator)
-- **APY**: 3-10% (after commission)
-- **Instant unstaking**: 5% penalty
-- **Normal unstaking**: 7-day unbonding period
+| Status label | Scope |
+| --- | --- |
+| **Working foundation** | Local-first development does not require a financial stake. |
+| **V1-testnet target** | Test credentials and test-only records may represent operational roles or responsibilities. They would not carry monetary value. |
+| **Research direction** | Accountable participation, reliability evidence, conflict management, and proportionate remedies. |
+| **External validation required** | Security, fairness, due process, labor and consumer implications, financial regulation, and accessibility. |
 
-## Governance Staking
-- Stake to vote: 1 [ASHA](index.md) = 1 vote (quadratic voting optional)
-- Voting rewards: 0.1-1% APY for active participation
-- Proposal bond: 100-1000 [ASHA](index.md) (returned if passed)
+## Commitment model
 
-## Value Accrual Mechanisms
+At an outcome level, a participant operating shared infrastructure or providing a network service may need to:
 
-### Token Burning
-- 10% of all transaction fees burned permanently
-- Deflationary pressure increases token value over time
-- Target: Reduce supply by 50% over 10 years
+- accept a clearly defined role and policy version;
+- demonstrate that it can perform the declared service;
+- protect credentials and report compromise promptly;
+- meet service-quality and availability obligations appropriate to the role;
+- preserve required evidence without collecting unrelated personal data;
+- disclose material conflicts of interest;
+- participate in incident response and dispute resolution; and
+- complete an orderly exit that does not abandon active obligations.
 
-### Buy-Back Program
-- 5% of protocol revenue used to buy ASHA from market
-- Tokens burned or added to treasury
-- Executed quarterly based on [DAO approval](../governance.md)
+These responsibilities do not imply that operators must expose proprietary systems or private user content to the public.
 
-### Revenue Sharing
-- Stakers receive portion of protocol revenue
-- Based on stake amount and duration
-- Distributed monthly in ASHA or stablecoins
+## Accountability without automatic punishment
+
+Failures can arise from malicious behavior, negligence, software defects, ambiguous policy, or circumstances outside an operator's control. A credible process should distinguish among them.
+
+Potential responses remain a research topic, but should follow these principles:
+
+- evidence precedes consequential action;
+- safeguards can contain immediate harm while review proceeds;
+- remedies are proportionate to impact and responsibility;
+- the affected participant receives notice and a meaningful challenge path;
+- related cases are treated consistently;
+- emergency decisions are documented and reviewed; and
+- remediation and safe re-entry are possible when appropriate.
+
+The public documentation intentionally omits internal detection thresholds, scoring logic, and enforcement triggers.
+
+## Test credentials are not assets
+
+Access to V1-testnet may be represented by revocable credentials or test-only records. Such access:
+
+- may change as the test design evolves;
+- may be restricted or revoked to protect the environment;
+- creates no yield, redemption right, ownership interest, or future allocation;
+- is not transferable unless a test explicitly requires it; and
+- does not migrate to a future production network.
+
+## Production decision gate
+
+No staking or economic-commitment design should be considered production-ready until independent reviewers have evaluated security, centralization, fairness, legal classification, dispute handling, and failure recovery. The preferred solution is the least financialized mechanism that can meet the actual accountability requirement.
+
+For the broader model, see [Contribution Economy Research](index.md), [Economic Integrity](security.md), and [Governance](../governance.md).

@@ -1,14 +1,12 @@
----
-sidebar_position: 1
----
+# SENEXIC documentation
 
-# Start Here
+SENEXIC is developing AIA as a local-first intelligence system centered on
+owner control, governed knowledge, and verifiable contribution.
 
-Welcome to the SENEX Intelligent Chain documentation.
+Start with the [documentation overview](docs/index.md), then review the
+[AIA](docs/architecture/aia_agents.md), [trust and privacy](docs/privacy/index.md),
+and [roadmap](docs/roadmap.md) pages.
 
-SENEX is a **privacy-first intelligence economy**: local AI agents that keep your data on your device, share governed memory paths as **neurolinks**, and earn for the data and computation they actually contribute — with every contribution proven, independently verified, and fairly rewarded.
-
-- New here? Read the [System Documentation overview](docs/index.md).
-- Want the architecture? See [System Architecture](docs/architecture/index.md).
-- Care about privacy? See [Privacy & Security](docs/privacy/index.md).
-- Curious what is actually built? Every page carries a **status note** separating what ships today (v1.0-alpha) from the roadmap.
+This public repository describes capabilities, trust boundaries, and maturity.
+Implementation-sensitive specifications are intentionally kept outside the
+public documentation.

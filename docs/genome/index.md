@@ -1,6 +1,14 @@
-# GENOME Technical Documentation
+---
+title: GENOME research direction
+description: Compatibility route for the current GENOME research overview.
+---
 
-This section is dedicated to the technical implementation details of GENOME (Global Self-Evolving AI Mind).
+# GENOME research direction
 
-> [!NOTE]
-> This content is managed separately and is not available to this github user!er!
+This route is retained for compatibility with earlier references.
+
+GENOME is a post-V1 research direction for collective intelligence emerging
+from governed, verified outcomes. It is not a running global model or a shipped
+network capability.
+
+Read the current [GENOME research overview](../architecture/genome.md).

@@ -1,63 +1,54 @@
-# Privacy Technologies (Target Design)
+# Privacy Controls and Technology Direction
 
-:::warning Design and research roadmap
-The cryptographic mechanisms on this page describe the **privacy architecture SENEX is building toward**, not features shipping in v1.0-alpha. Today, privacy is enforced by local-first governance (raw data and locators never leave the device; bounded, revocable **neurolink** sharing). Treat the parameters below as design targets.
+SENEX describes privacy technology by the protection it should provide, not by publishing a recipe for the underlying implementation. Technology names alone do not establish privacy; controls must be connected to a specific data flow, threat, and body of evidence.
+
+:::info Working foundation
+The current foundation is local-first AIA development: keep user-selected context in the user-controlled environment, require deliberate action for external exchange, and design sharing around a bounded purpose. Coverage and behavior remain under active development.
 :::
 
-## A. Differential Privacy (DP)
-- **Designed to apply at the client level** before any data leaves the device
-- **Target privacy budget**: ε = 1.0, δ = 1e-6
-- **Mechanism**: Gaussian noise calibrated to sensitivity of gradients
-- **Composition**: Advanced composition for multiple contributions
+## Control layers
 
-**Implementation:**
-```python
-gradient_noisy = gradient + Normal(0, sigma^2)
-# where sigma = (2 * ln(1.25/delta) * delta_sensitivity^2) / epsilon^2
-# delta_sensitivity = global sensitivity (max gradient norm)
-```
+### Local data control
 
-## B. Secure Multi-Party Computation (MPC)
-- **Protocol**: SPDZ (Secure Pattern Detection and Zero-knowledge)
-- **Participants**: N validator nodes (N ≥ 5, threshold = ⌈2N/3⌉)
-- **Secret Sharing**: Shamir's secret sharing with polynomial degree t = ⌊N/2⌋
-- **Operations**: Addition and multiplication in encrypted domain
+The first layer limits unnecessary collection. AIA should let users choose which sources can be used, understand when context is active, and remove access that is no longer wanted. Sensitive processing should remain local where the task permits it.
 
-**Data Flow:**
-1. Client splits noisy gradient into N shares: \{s₁, s₂, ..., sₙ\}
-2. Each share sent to different validator via encrypted channel
-3. Validators compute f(s₁, s₂, ..., sₙ) = Σ gradients collaboratively
-4. Only aggregated result is revealed, individual shares remain secret
+Local processing does not eliminate device risk. Compromised accounts, unsafe backups, other software, physical access, and operating-system behavior can all cross the same boundary. Product guidance and testing must account for this wider environment.
 
-## C. Zero-Knowledge Proofs (ZKP)
-- **Type**: zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge)
-- **Purpose**: Prove computation correctness without revealing inputs
+### Purpose-bound exchange
 
-**Applications:**
-- Prove gradient computed correctly without revealing local data
-- Prove contribution quality without revealing dataset statistics
-- Prove compliance with privacy budget without revealing parameters
+When information must leave the local environment, the intended control is a narrowly scoped request and a bounded response. The user should be able to distinguish a one-time action from continuing access and understand the recipient and purpose.
 
-## D. Homomorphic Encryption (HE)
-- **Scheme**: Partially Homomorphic (Paillier) or Fully Homomorphic (SEAL)
-- **Use Case**: Encrypted queries to [Genome](../architecture/genome.md) for sensitive inference tasks
-- **Operations**: Addition and multiplication on encrypted values
+Protection after disclosure has limits. Revocation can stop future authorized access, but it cannot erase knowledge already received by an independent party. Minimization before transfer is therefore more important than relying on revocation alone.
 
-## E. Federated Learning with Secure Aggregation
-- **Architecture**: Cross-silo federated learning ([AIA agents](../architecture/aia_agents.md) = silos)
-- **Aggregation**: FedAvg with secure aggregation protocol
-- **Privacy**: Double masking + differential privacy
-- **Byzantine Robustness**: Krum or Trimmed Mean aggregation
+### Integrity and accountability
 
-**Algorithm:**
-1. Each client k computes local gradient gₖ on private data
-2. Add DP noise: g̃ₖ = gₖ + N(0, σ²I)
-3. Apply secure aggregation: G = Σₖ g̃ₖ (computed via MPC)
-4. Global model update: θₜ₊₁ = θₜ - η·G
-5. Broadcast updated model to clients (pull-based)
+Future cooperation requires evidence that a request came from an authorized participant, that the approved content was not silently changed in transit, and that a relevant event can be investigated. Public documentation states these outcomes without exposing internal identity, messaging, audit, or validation constructions.
 
-## F. Anonymization Network
-- **Layer 1**: TLS 1.3 encryption for all communications
-- **Layer 2**: Tor-like onion routing or mixnet for submission anonymity
-- **Layer 3**: Temporal obfuscation (randomized submission times)
-- **Layer 4**: Network-level unlinkability (different IPs per contribution)
+:::caution V1-testnet target
+Authenticated network cooperation, consistent event records, and contribution-aware accountability are testnet targets. V1-testnet will use test-only value and is not a production privacy network.
+:::
+
+### Privacy-enhancing collaboration
+
+SENEX is researching ways for participants to cooperate while reducing what any participant can learn beyond the intended result. Candidate approaches will be selected and evaluated privately against defined threats, performance constraints, and failure behavior.
+
+:::note Research direction
+No formal privacy-preserving collaboration mechanism is claimed as a current feature. Protocol choices, parameters, and internal evaluation details are intentionally not published before implementation and review.
+:::
+
+## How a control becomes a claim
+
+A privacy control should move through an evidence path:
+
+1. define the protected information and the trust boundary;
+2. state the threat and expected failure behavior;
+3. implement the control without widening unrelated access;
+4. test normal, adversarial, and recovery scenarios;
+5. document limitations in user-facing language; and
+6. obtain independent review before making a strong public claim.
+
+:::warning External validation required
+Implementation review, adversarial testing, and deployment-specific assessment are necessary before any control is described as formally private, anonymous, tamper-proof, or suitable for regulated use.
+:::
+
+See [Privacy Assurance](mathematical_guarantees.md), [Threat Model](threat_model.md), and [Compliance](compliance.md) for the evidence and claim boundaries.

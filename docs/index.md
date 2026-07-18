@@ -1,61 +1,49 @@
-# SENEX Intelligent Chain
+# SENEX Documentation
 
-## Complete System Documentation
+SENEX is developing a local-first intelligence system: personal AIA software works with user-approved context close to the user, while future network components are intended to support governed cooperation between independent participants.
 
----
-
-:::info Status — what ships today vs. the vision
-This documentation describes the full SENEX architecture **and** its roadmap. **Shipping today (v1.0-alpha):** local-first AIA agents, a permissioned testnet between real nodes, and a working intelligence-economy loop — **Proof of Data** + **Proof of Computation** fusing into **Proof of Intel**, with contribution-weighted rewards. The cryptographic privacy stack described later (differential privacy, secure multi-party computation, zero-knowledge proofs) is the **target design and active research**, not a current guarantee. There is **no live token** — ASHA accounting is simulated — and the AGI posture stays *candidate*, never *implemented*.
+:::info Working foundation
+The current foundation focuses on local execution, local context handling, user-directed workflows, and governed sharing concepts. It is under active development. This documentation does not represent a generally available production network.
 :::
 
-## Executive Summary
+:::caution V1-testnet target
+V1-testnet is a future production-candidate environment for integration, security, and economic testing. Any value represented there will be test-only, non-monetary, and unsuitable for investment or exchange. SENEX has no live public blockchain or token economy.
+:::
 
-SENEX Intelligent Chain is a privacy-first **intelligence economy**: local AI agents that keep your data on your device, share governed memory paths as **neurolinks**, and earn for the data and computation they actually contribute. Contribution is proven, independently verified by every participating node, and fairly rewarded — turning isolated assistants into a network that grows more capable together without surrendering individual data sovereignty.
+## Product direction
 
-### What makes it different
-- **Proof of Intel** — a contribution's **Proof of Data** and **Proof of Computation** fuse into a single verifiable record that decides each participant's reward share.
-- **Neurolinks** — governed, revocable grants over your data paths; raw locators and raw data never leave your device.
-- **Block-style verification** — every node independently recomputes each iteration and seals a hash-chained record before anything settles.
-- **Coordination surplus** — when participants coordinate (the canonical two-traveler routing example), the network reaches an outcome that beats the self-interested baseline, and the surplus funds side payments so no one ends up worse off.
-- **Honest by construction** — capability and token claims stay gated behind real evidence.
+SENEX is organized around three horizons:
 
----
+| Horizon | Purpose | Status |
+| --- | --- | --- |
+| AIA foundation | Give users a private, controllable assistant that can work with local context | **Working foundation** |
+| V1-testnet | Test governed coordination, contribution records, and network behavior under realistic conditions | **V1-testnet target** |
+| GENOME | Explore whether useful collective intelligence can emerge from independently governed participants | **Research direction** |
 
-## Documentation Sections
+V1, if approved after testnet evidence and external review, will be a separate future production network with a fresh genesis. Testnet state, balances, or participation will not automatically become production assets or privileges.
 
-### [System Architecture](architecture/index.md)
-Explore the core components: GENOME, AIA Agents, and the Intelligent Chain infrastructure.
+## Design principles
 
-### [Privacy & Security](privacy/index.md)
-The local-first guarantees that hold today, and the cryptographic privacy stack on the research roadmap.
+- **Local first:** sensitive context should remain within the user-controlled environment unless the user authorizes a specific exchange.
+- **Explicit purpose:** a request should state what is needed, why it is needed, and what result will be returned.
+- **Minimum disclosure:** cooperation should use the smallest useful amount of information rather than broad access to a participant’s data.
+- **Revocable control:** ongoing permissions should be visible and removable by the user.
+- **Verifiable progress:** roadmap language is not a substitute for implementation evidence, testing, or independent assessment.
+- **Separation of environments:** research, testnet, and future production are distinct security and release decisions.
 
-### [Tokenomics](tokenomics/index.md)
-The ASHA contribution economy (simulated today): distribution, incentives, staking, and economic security.
+:::warning External validation required
+Security, privacy, performance, governance, and economic claims remain subject to independent testing and review. No page in these docs should be read as a certification, formal privacy guarantee, financial offer, or assurance that a future production launch will occur.
+:::
 
-### [Applications & Use Cases](applications.md)
-Real-world directions in navigation, healthcare, and finance.
+## Explore the documentation
 
-### [Governance](governance.md)
-The hybrid DAO structure and governance processes.
+- [Architecture](architecture/index.md) — system boundaries and the relationship between AIA, V1-testnet, V1, and GENOME.
+- [Privacy and security](privacy/index.md) — user controls, data-flow expectations, threat categories, and assurance limits.
+- [Applications](applications.md) — potential user and organizational use cases.
+- [Governance](governance.md) — the proposed approach to accountable change.
+- [Economics](tokenomics/index.md) — research around contribution and coordination; no live token economy.
+- [Migration path](migration.md) — how test environments are separated from a possible future production network.
+- [Roadmap](roadmap.md) — staged development and evidence gates.
+- [Innovation](innovation.md) — the public capability-level summary of SENEX research.
 
-### [Roadmap](roadmap.md)
-Development phases from the local-first permissioned alpha to a custom Layer 1.
-
-### [Scalability](scalability.md)
-Performance targets and computational distribution strategies.
-
-### [Migration Path](migration.md)
-The planned transition toward the custom SENEX Layer 1.
-
-### [Innovation Summary](innovation.md)
-The named inventions that differentiate SENEX.
-
----
-
-## Technical Documentation Spaces
-
-### [AIA Technical Docs](aia/index.md)
-Deep dive into the Adaptive Intelligence Assistants that run on your device.
-
-### [GENOME Technical Docs](genome/index.md)
-Technical specifications for the network mind that emerges from connected agents.
+These public docs intentionally explain outcomes, trust boundaries, and status without publishing proprietary implementation details that could weaken security or enable reconstruction.

@@ -1,50 +1,69 @@
-# AIA AGENTS (Adaptive Intelligence Assistants)
+# AIA: Local-First Personal Intelligence
 
-Client-side secure agents running on user devices with full local data access and privacy-first design.
+AIA is the user-facing foundation of SENEX. Its purpose is to help a person work with their own context while keeping control, visibility, and consent close to the point where that context is used.
 
-:::info Shipping today vs. roadmap
-**Live in v1.0-alpha:** the local engine and RAG, hardware adaptation, encrypted-at-rest local storage, governed **neurolink** sharing, and signed peer messaging. The **Privacy-Preserving Contribution** pipeline below (differential privacy, secure aggregation, zero-knowledge proofs) is the **target design**, not a current feature.
+:::info Working foundation
+Local execution, local context handling, user-directed workflows, and governed-sharing foundations are under active development. Availability and maturity may vary by platform and build; this page describes the intended product boundary, not a universal production guarantee.
 :::
 
-## Key Features
-- **Cross-platform compatibility** (Windows, macOS, Linux, iOS, Android)
-- **Full local data access** with RAG (Retrieval-Augmented Generation) capabilities
-- **Hardware-adaptive**: 500MB mobile to 16GB server configurations
-- **Privacy-first**: All sensitive processing happens locally
-- **Adaptive learning**: Continuously fine-tunes on user interactions
+## What AIA is designed to do
 
-## Technical Architecture
+AIA brings together three user outcomes:
 
-### Core Engine
-- **Local LLM**: Quantized version of [Genome](../genome/index.md) model (4-bit or 8-bit quantization)
-- **Vector Database**: Local embeddings for RAG (ChromaDB, FAISS, or Milvus)
-- **Context Manager**: Maintains conversation history and user preferences
-- **Task Executor**: Handles actions (scheduling, searches, file operations)
+- **Contextual assistance:** use material the user selects to support conversation, research, organization, and task workflows.
+- **Local control:** keep sensitive working context in the user-controlled environment unless a particular exchange is approved.
+- **Governed cooperation:** allow narrowly scoped requests between participants without turning personal data into a shared repository.
 
-### Data Processing Pipeline
-1. User query received → Context retrieval from local vector DB
-2. Local LLM generates response using retrieved context
-3. If computation-heavy: Prepare privacy-preserving query for [Genome](../genome/index.md)
-4. Apply differential privacy noise to query embeddings
-5. Submit encrypted query to [blockchain](intelligent_chain.md) via smart contract
-6. Receive result and post-process locally
+The local-first approach is architectural, but it is not absolute isolation. Features that call an external service, communicate with another participant, or retrieve public information can create a data flow beyond the device. AIA should make that boundary understandable before the exchange and expose enough information for the user to make a meaningful choice.
 
-### Privacy-Preserving Contribution (Roadmap)
-- **Gradient Computation**: Calculate model gradients on local data
-- **Differential Privacy**: Add calibrated Gaussian noise (target ε=1.0, δ=1e-6)
-- **Secure Aggregation**: Use secure multi-party computation protocol
-- **Anonymous Submission**: Submit through mixnet or onion routing
-- **Zero-Knowledge Proofs**: Prove computation correctness without revealing data
+## Working foundation scope
 
-### Hardware Adaptation
-- **Edge Devices (Mobile)**: Ultra-lightweight model (\<500MB), quantized inference
-- **Desktop/Laptop**: Standard model (2-4GB), full RAG capability
-- **Server**: Full model (8-16GB), can act as validator node
-- **Auto-scaling**: Adjusts model size and features based on available resources
+The current development baseline provides foundations in the following areas.
+Each item remains subject to build-specific testing and release qualification:
 
-### Security Measures
-- **Encrypted Storage**: All local data encrypted at rest (AES-256)
-- **Secure Enclaves**: Use TEE (Trusted Execution Environment) when available
-- **Code Signing**: All updates digitally signed by DAO-approved keys
-- **Sandboxing**: Agent runs in isolated environment
-- **Audit Logging**: Local tamper-proof logs of all blockchain interactions
+| Area | Public capability boundary |
+| --- | --- |
+| Owner authority | An owner-controlled identity direction that does not depend on a centralized SENEX account |
+| Authorized devices | Multiple separately admitted devices with a foundation for bounded authority and revocation |
+| Local intelligence | Local model execution and lifecycle foundations for supported configurations |
+| Governed knowledge | Local retrieval, memory, provenance, and answer-evidence foundations |
+| Protected content | Encrypted local content-storage foundations; complete device security still depends on the surrounding environment |
+| Product surfaces | Desktop, local API, command-line, and mobile foundations at different stages of maturity |
+| Admitted collaboration | Permission-bounded interaction between participants that have been explicitly admitted |
+| Contribution research | Foundations for Proof of Data, Proof of Computation, Proof of Intel, provider-marketplace simulation, and test-only accounting |
+
+“Foundation” is intentionally narrow. It indicates demonstrated development
+groundwork for a stated scope, not universal platform support, production
+assurance, or a public network service.
+
+## Trust and permission model
+
+AIA treats access as a purpose-bound permission rather than a permanent entitlement. A governed request should identify:
+
+1. the party or capability requesting access;
+2. the purpose of the request;
+3. the category and scope of information involved;
+4. whether the request is one-time or continuing; and
+5. how the user can decline or revoke it.
+
+The intended result is bounded disclosure: return what is useful for the approved task, not the underlying collection by default. This principle also applies to derived information, because summaries and inferences may remain sensitive even when raw source material is not transferred.
+
+## Relationship to the network
+
+AIA does not require a live public blockchain to provide local value. The future [V1-testnet coordination layer](intelligent_chain.md) is intended to test authenticated cooperation, consistent event records, and contribution-aware workflows between independent participants.
+
+:::caution V1-testnet target
+Network participation, contribution records, and test value remain future testnet capabilities. They are not production services, financial assets, or evidence of a live token economy.
+:::
+
+A possible V1 production network would be a fresh-genesis system, launched only after separate security, operational, and governance decisions. Testnet identity, state, or value would not automatically carry over.
+
+## Assurance limits
+
+Local-first design reduces unnecessary central collection, but the complete security posture also depends on device integrity, account access, software supply chain, backups, user choices, and any approved external recipient. See [Privacy and Security](../privacy/index.md) for the public assurance model.
+
+:::warning External validation required
+Privacy boundaries, authorization behavior, update safety, and cross-platform consistency require independent testing. Until that evidence exists, AIA should be evaluated as a working foundation under development rather than a certified secure environment.
+:::
+
+Implementation-specific model choices, storage formats, permission internals, and network interfaces are not published in these public docs.

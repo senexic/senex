@@ -1,67 +1,86 @@
-# Incentives & Rewards
+# Contribution Incentives
 
-:::info Simulated economy — design model
-The fees and reward splits below model the intelligence economy. ASHA is a **simulated accounting unit** (transferability disabled in the runtime), so these are design parameters, not live prices or payouts.
+:::warning Research direction
+Contribution rewards and provider settlement are not live. ASHA is used only as a simulated, test-only accounting unit and has no monetary value. This page describes desired behavior, not a payout schedule, formula, or offer.
 :::
 
-## Dynamic Fee Structure
+The contribution-economy research asks how a network can encourage useful, authorized work while discouraging surveillance, low-quality volume, and strategic manipulation.
 
-### Transaction Types
+## Status
 
-1. **Data Contribution Fee**: Paid by contributors submitting training data
-   - Base: 0.1 [ASHA](index.md) per contribution
-   - Multiplier: Based on data quality score (0.5x to 2.0x)
+| Status label | Scope |
+| --- | --- |
+| **Working foundation** | Local-first AIA operation does not depend on rewards. Simulation can be used to inspect hypothetical coordination outcomes. |
+| **V1-testnet target** | Test-only records may help evaluate whether contribution and service events can be verified and contested safely. |
+| **Research direction** | Attribution, provider settlement, prioritization, and long-term incentive design. |
+| **External validation required** | Fairness, security, privacy, accounting, legal treatment, and resistance to coordinated abuse. |
 
-2. **Query Fee**: Paid by users requesting [Genome](../architecture/genome.md) inference
-   - Simple query: 0.01 [ASHA](index.md)
-   - Complex inference: 0.1-1.0 ASHA
-   - Real-time computation: 1.0-10.0 ASHA
+## Desired outcomes
 
-3. **Model Update Fee**: Gas cost for updating Genome on-chain
-   - Paid by validators, reimbursed from reward pool
+A credible model should:
 
-4. **Governance Fee**: Cost to submit [DAO proposals](../governance.md)
-   - Base: 100 [ASHA](index.md) (anti-spam)
-   - Refunded if proposal passes
+- reward verified usefulness rather than raw activity;
+- preserve a person's control over whether and how context is contributed;
+- make the applicable rules visible before work begins;
+- account for quality, reliability, risk, and resource responsibility without exposing private inputs;
+- prevent a single party from unilaterally validating its own claim;
+- handle delayed discovery of faults or abuse;
+- offer review and appeal for consequential decisions; and
+- remain understandable enough to audit.
 
-## Reward Distribution (AI-Optimized)
+## Conceptual evaluation dimensions
 
-### Fee Distribution (AI-adjusted per epoch)
-- **Data Contributors**: 40-60% (quality-weighted)
-- **Compute Validators**: 20-35% (work-based)
-- **Development & Maintenance**: 10-20%
-- **DAO Governance**: 5-15%
-- **Protocol Reserve**: 5-10%
+The research considers several outcome-level dimensions. They are not a published scoring formula:
 
-### Quality Metrics
-```
-Quality Score = w₁·Accuracy + w₂·Uniqueness + w₃·Relevance + w₄·Volume
-```
+- **Authorization:** the work was within the participant's approved scope.
+- **Validity:** the claimed service or contribution can be independently supported.
+- **Usefulness:** the outcome advances the declared task or shared objective.
+- **Quality:** the result meets the applicable acceptance policy.
+- **Reliability:** the participant fulfilled commitments consistently and reported failures honestly.
+- **Risk:** privacy, safety, security, and policy concerns are accounted for.
+- **Originality:** duplicate, replayed, or fabricated activity is not treated as new value.
 
-**Component Definitions:**
-- **Accuracy**: How much does data improve model performance? (Validation loss reduction)
-- **Uniqueness**: How rare/novel is this data? (Distance from existing distribution)
-- **Relevance**: How useful for current model priorities? (Alignment with goals)
-- **Volume**: How much data provided? (Logarithmic scale)
+The relative importance of these dimensions remains research-sensitive and may vary by use case. Exact weights, thresholds, and detection methods are intentionally not public.
 
-### Reputation Multipliers
-- New contributor: 0.8x (probationary)
-- Established (>10 contributions): 1.0x
-- Trusted (>100 contributions, high quality): 1.2x
-- Elite (>1000 contributions, consistently high): 1.5x
-- Flagged (suspicious activity): 0.5x
-- Banned (proven malicious): 0x
+## Contribution flow
 
-## Cross-Domain Incentive Balancing
+1. A task or contribution opportunity declares its purpose and participation policy.
+2. A participant opts in to a bounded scope.
+3. The system records evidence needed to validate the outcome, while minimizing unnecessary disclosure.
+4. The result is checked against the relevant policy.
+5. A test-only recognition record may be created when the claim qualifies.
+6. Suspicious, incomplete, or disputed claims enter review rather than automatic settlement.
+7. The participant can inspect the outcome and use the available challenge process.
 
-### Domain-Specific Pools
-- Healthcare: 25% of contribution rewards
-- Finance: 20% of contribution rewards
-- Navigation: 15% of contribution rewards
-- Disaster Prediction: 15% of contribution rewards
-- General Purpose: 25% of contribution rewards
+## Anti-gaming principles
 
-### Dynamic Rebalancing
-- If domain underserved: Increase reward multiplier
-- If domain saturated: Decrease reward multiplier
-- Adjustments weekly based on model performance gaps
+The model must account for common incentive failures without revealing operational countermeasures. Evaluation should cover:
+
+- duplicate or replayed contributions;
+- fabricated work and self-dealing;
+- identity multiplication and coordinated accounts;
+- collusion between requesters, contributors, or operators;
+- manipulation of quality signals;
+- withholding useful failures while reporting only favorable results;
+- concentration of influence; and
+- attempts to infer private information from recognition records.
+
+Possible controls must be tested as a system. A control that reduces one abuse pattern but creates discrimination, centralization, or privacy leakage is not automatically acceptable.
+
+## Provider settlement boundary
+
+SENEX is not currently paying independent providers through the network. Before provider settlement could become real, the system would need:
+
+- clear service definitions and acceptance criteria;
+- evidence that work was authorized and delivered;
+- identity and jurisdiction controls appropriate to the service;
+- invoicing, tax, accounting, refund, and dispute processes;
+- monitoring for abuse and conflicts of interest;
+- operational reserves and failure handling; and
+- independently reviewed legal terms.
+
+## Measuring the research
+
+Evaluation should focus on observable outcomes: false acceptance, false rejection, dispute quality, concentration, participation diversity, privacy impact, reliability, and whether useful work is encouraged without coercive data collection. Results should be published only when the methodology and limitations can be explained.
+
+See [Economic Integrity](security.md) for the abuse-resistance model and [Governance](../governance.md) for how policy decisions should be reviewed.

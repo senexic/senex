@@ -1,32 +1,24 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'SENEXIC Docs',
-  tagline: 'The privacy-first intelligence economy — local AI, real contribution, fair reward',
+  tagline: 'Sovereign intelligence, built around the owner',
   favicon: 'img/logo.svg',
-
-  // Set the production url of your site here
   url: 'https://docs.senexic.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'senexic', // Usually your GitHub org/user name.
-  projectName: 'senex', // Usually your repo name.
+  organizationName: 'senexic',
+  projectName: 'senex',
   deploymentBranch: 'gh-pages',
+  trailingSlash: true,
+  onBrokenLinks: 'throw',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
 
-  // 'warn' (not 'throw') so pre-existing broken links in the in-progress
-  // AIA-Chain sub-docs do not block deployment of the rest of the site.
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -38,12 +30,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/senexic/senex/tree/main/',
+          showLastUpdateTime: true,
         },
-        blog: false, // Disable blog for now as requested
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -52,17 +41,17 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/aiapng.png',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'SENEXIC Docs',
+      title: 'SENEXIC',
+      hideOnScroll: true,
       logo: {
-        alt: 'SENEXIC Logo',
+        alt: 'SENEXIC',
         src: 'img/logo.svg',
       },
       items: [
@@ -70,15 +59,31 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'docs',
           position: 'left',
-          label: 'Documentation',
+          label: 'Overview',
         },
-        { to: '/docs/architecture', label: 'Architecture', position: 'left' },
-        { to: '/docs/privacy', label: 'Privacy', position: 'left' },
-        { to: '/docs/tokenomics', label: 'Economics', position: 'left' },
-        { to: '/docs/aia', label: 'AIA', position: 'left' },
         {
-          href: 'https://github.com/senexic/senex',
-          label: 'GitHub',
+          to: '/docs/architecture/aia_agents',
+          label: 'AIA',
+          position: 'left',
+        },
+        {
+          to: '/docs/architecture',
+          label: 'Architecture',
+          position: 'left',
+        },
+        {
+          to: '/docs/privacy',
+          label: 'Trust',
+          position: 'left',
+        },
+        {
+          to: '/docs/roadmap',
+          label: 'Status',
+          position: 'left',
+        },
+        {
+          href: 'https://senexic.com',
+          label: 'senexic.com',
           position: 'right',
         },
       ],
@@ -87,47 +92,39 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Vision',
+          title: 'Explore',
           items: [
-            {
-              label: 'Innovation',
-              to: '/docs/innovation',
-            },
-            {
-              label: 'Roadmap',
-              to: '/docs/roadmap',
-            },
+            {label: 'AIA', to: '/docs/architecture/aia_agents'},
+            {label: 'Architecture', to: '/docs/architecture'},
+            {label: 'Current status', to: '/docs/roadmap'},
           ],
         },
         {
-          title: 'Governance',
+          title: 'Trust',
           items: [
-            {
-              label: 'DAO Structure',
-              to: '/docs/governance',
-            },
+            {label: 'Privacy posture', to: '/docs/privacy'},
+            {label: 'Assurance', to: '/docs/privacy/compliance'},
+            {label: 'Limitations', to: '/docs/privacy/threat_model'},
           ],
         },
         {
-          title: 'Economy',
+          title: 'Research',
           items: [
-            {
-              label: 'Tokenomics',
-              to: '/docs/tokenomics',
-            },
+            {label: 'Innovation', to: '/docs/innovation'},
+            {label: 'GENOME', to: '/docs/architecture/genome'},
+            {label: 'Contribution economy', to: '/docs/tokenomics'},
           ],
         },
         {
-          title: 'Architecture',
+          title: 'SENEXIC',
           items: [
-            {
-              label: 'System Overview',
-              to: '/docs/architecture',
-            },
+            {label: 'Main website', href: 'https://senexic.com'},
+            {label: 'Documentation', to: '/docs/'},
           ],
         },
       ],
-      copyright: `Copyright © 2021 SENEXIC Intelligent Chain. The SENEX design dates from 2021.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SENEXIC. Public
+      capability and status documentation.`,
     },
     prism: {
       theme: prismThemes.github,

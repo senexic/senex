@@ -1,46 +1,24 @@
-import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   docs: [
     'index',
     {
       type: 'category',
-      label: 'Architecture',
-      link: { type: 'doc', id: 'architecture/index' },
+      label: 'AIA and architecture',
+      link: {type: 'doc', id: 'architecture/index'},
       collapsed: false,
       items: [
-        'architecture/genome',
         'architecture/aia_agents',
         'architecture/intelligent_chain',
+        'architecture/genome',
       ],
     },
     {
       type: 'category',
-      label: 'AIA Chain',
-      link: { type: 'doc', id: 'aia/index' },
+      label: 'Trust and privacy',
+      link: {type: 'doc', id: 'privacy/index'},
       collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: 'Architecture',
-          items: ['aia/architecture/secure-remote'],
-        },
-        {
-          type: 'category',
-          label: 'Smart Contracts',
-          items: ['aia/contracts/overview'],
-        },
-        {
-          type: 'category',
-          label: 'Guides',
-          items: ['aia/guides/contributor-guide'],
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Privacy',
-      link: { type: 'doc', id: 'privacy/index' },
       items: [
         'privacy/technologies',
         'privacy/mathematical_guarantees',
@@ -48,23 +26,19 @@ const sidebars: SidebarsConfig = {
         'privacy/compliance',
       ],
     },
-    {
-      type: 'category',
-      label: 'Tokenomics',
-      link: { type: 'doc', id: 'tokenomics/index' },
-      items: [
-        'tokenomics/distribution',
-        'tokenomics/incentives',
-        'tokenomics/security',
-        'tokenomics/staking',
-      ],
-    },
-    'governance',
+    'tokenomics/index',
     'applications',
+    'governance',
+    'innovation',
     'scalability',
     'migration',
-    'innovation',
     'roadmap',
+    {
+      type: 'category',
+      label: 'Research archive',
+      collapsed: true,
+      items: ['aia/index'],
+    },
   ],
 };
 
