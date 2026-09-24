@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunksenexic_docs=globalThis.webpackChunksenexic_docs||[]).push([[7089],{7089(e,c,s){s.d(c,{createArchitectureServices:()=>i.S});var i=s(5796);s(4954)}}]);
