@@ -1,3 +1,8 @@
+---
+title: Architecture overview
+description: The trust boundaries between the owner's AIA, governed exchange, the coordination network, and GENOME research.
+---
+
 # Architecture Overview
 
 SENEX separates personal intelligence, governed exchange, and network coordination into distinct trust boundaries. This lets each layer be evaluated on its own instead of treating a future network as a prerequisite for useful local software.
@@ -8,15 +13,31 @@ The active foundation is AIA: local-first software for user-directed assistance,
 
 ## The system at a glance
 
+```mermaid
+flowchart LR
+  subgraph owner["Owner environment"]
+    W["Wallet and devices"] --> A["AIA"]
+    A --> D["Governed local data"]
+  end
+  A <-->|"purpose-bound request"| B["Another owner's AIA"]
+  A -->|"minimum network-visible event"| C["Coordination network<br/>(V1-testnet target)"]
+  B --> C
+  C -.->|"research"| G["GENOME"]
+```
+
 ### 1. User-controlled environment
 
 [AIA](aia_agents.md) operates at the edge of the system, where the user’s context and decisions originate. Its responsibility is to help the user while maintaining a clear boundary between local material and anything intentionally exchanged with another participant.
+
+The owner's [wallet and devices](wallet_devices.md) anchor this boundary: one wallet, a separate key for each device, and revocation per device.
 
 The user-controlled environment is the primary trust boundary. Local possession does not, by itself, guarantee privacy: device security, operating-system behavior, backups, extensions, and user configuration also matter. SENEX therefore treats clear consent and observable data flow as product requirements rather than relying on the word “local.”
 
 ### 2. Governed exchange
 
 When cooperation is useful, the intended model is purpose-bound exchange. A participant should be able to understand what is requested, approve or reject it, limit the scope, and stop future access. Returned information should be bounded to the task rather than exposing an unrestricted source.
+
+Exchange can be recursive: one owner's agent may ask another's, which may ask others, and each hop is governed by the owner of the data at that hop. The research goal is to send computation to the data rather than data to the computation. See [Proof of data](../thesis.md).
 
 The exchange layer is a capability boundary, not a promise that every collaboration technique is already implemented or formally private.
 
@@ -30,13 +51,15 @@ The coordination network is a future production-candidate test environment. It i
 
 ### 4. Collective intelligence research
 
-[GENOME](genome.md) is a post-V1 research direction concerning useful collective intelligence across independently governed participants. It is not a deployed network mind, a current training system, or an implemented form of general intelligence.
+[GENOME](genome.md) is the research direction concerning the collective intelligence that connected agents, governed data, computation, proofs, and outcomes may form. It builds on V1 foundations. It is not a deployed network mind, a current training system, or an implemented form of general intelligence.
 
 ## Release boundaries
 
+V1 is one integrated product: desktop, mobile, wallet and devices, governed data, local inference, networking, proofs, a permissioned contribution chain, accounting, marketplace, security, operations, and release. Components are built separately, but none alone is the product.
+
 V1-testnet and V1 are deliberately separate:
 
-- **V1-testnet target:** validates integrations, operational controls, security assumptions, and user experience with test-only value.
+- **V1-testnet target:** the production candidate, running the complete V1 product and protocol with test-only ASHA.
 - **V1:** a possible future production network, subject to evidence and approval, launched from a fresh genesis.
 - **GENOME:** research considered after V1 foundations are stable; it is not part of the V1 launch claim.
 

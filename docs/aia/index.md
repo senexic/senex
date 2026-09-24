@@ -7,8 +7,7 @@ description: Historical context for an early SENEX research prototype.
 
 :::caution Historical experiment
 This section records the purpose of an early browser-based research prototype.
-It is **not** the current AIA product, an active public service, a live
-blockchain, or a token network. Previous setup instructions and implementation
+It is **not** the current AIA product or an active public service. Previous setup instructions and implementation
 specifications have been retired because they no longer describe the current
 system.
 :::
@@ -51,4 +50,4 @@ interfaces, security construction, infrastructure, or operating parameters.
 - [System architecture](../architecture/index.md)
 - [Trust and privacy](../privacy/index.md)
 - [Current status and roadmap](../roadmap.md)
-- [Contribution-economy research](../tokenomics/index.md)
+- [ASHA and contribution](../tokenomics/index.md)

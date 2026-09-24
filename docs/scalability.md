@@ -1,3 +1,9 @@
+---
+title: Scalability and performance
+sidebar_label: Scalability
+description: How SENEX evaluates performance across local, peer, and network workloads, and what evidence is required before any capacity claim.
+---
+
 # Scalability & Performance
 
 :::warning No public production benchmark

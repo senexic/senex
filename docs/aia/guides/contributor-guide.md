@@ -25,7 +25,7 @@ Until that qualification is complete:
 
 - there is no public validator onboarding;
 - there is no live contribution payment;
-- there is no transferable ASHA asset;
+- ASHA in the software is simulated accounting;
 - no legacy configuration should be treated as supported; and
 - any future participation guide will be versioned against a named release.
 

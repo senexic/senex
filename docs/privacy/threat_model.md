@@ -1,3 +1,9 @@
+---
+title: Security threat model
+sidebar_label: Threat model
+description: The classes of risk SENEX considers, from device compromise to network manipulation and operator abuse.
+---
+
 # Security Threat Model
 
 This public threat model identifies the classes of risk SENEX considers and the trust boundaries where they arise. It intentionally avoids operational details that could help an attacker reproduce the system, target a control, or infer an internal security design.

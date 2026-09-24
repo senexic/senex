@@ -1,3 +1,9 @@
+---
+title: Compliance and responsible data use
+sidebar_label: Compliance
+description: What SENEX's local-first design can and cannot establish about legal compliance, and who is responsible for what.
+---
+
 # Compliance and Responsible Data Use
 
 SENEX’s local-first direction can support data minimization and user control, but architecture alone does not establish legal compliance. Applicable duties depend on the operator, user population, purpose, jurisdiction, data category, deployment, and contracts surrounding a specific use.
@@ -38,7 +44,7 @@ SENEX documentation and software behavior should support those decisions without
 Health, financial, employment, education, children’s data, biometric information, and other sensitive categories may require additional controls, agreements, notices, assessments, or prohibitions. A local-first workflow is not automatically suitable for these contexts.
 
 :::caution V1-testnet target
-V1-testnet is a future test environment with test-only value. It is not approved for production personal data, regulated processing, financial activity, or public token distribution. A future V1 would require a separate fresh-genesis launch decision and deployment-specific legal review.
+V1-testnet is a future test environment with test-only value. It is not approved for production personal data, regulated processing, or financial activity. A future V1 would require a separate fresh-genesis launch decision and deployment-specific legal review.
 :::
 
 ## Claims and evidence

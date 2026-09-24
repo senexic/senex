@@ -1,7 +1,13 @@
+---
+title: Contribution incentives and reward routing
+sidebar_label: Incentives and reward routing
+description: The desired behavior of SENEX contribution recognition, how credit is routed between roles, and the abuse patterns it must resist.
+---
+
 # Contribution Incentives
 
 :::warning Research direction
-Contribution rewards and provider settlement are not live. ASHA is used only as a simulated, test-only accounting unit and has no monetary value. This page describes desired behavior, not a payout schedule, formula, or offer.
+Contribution rewards and provider settlement are not live. In the software, ASHA is simulated accounting with no monetary value. This page describes desired behavior, not a payout schedule, formula, or offer.
 :::
 
 The contribution-economy research asks how a network can encourage useful, authorized work while discouraging surveillance, low-quality volume, and strategic manipulation.
@@ -41,6 +47,16 @@ The research considers several outcome-level dimensions. They are not a publishe
 - **Originality:** duplicate, replayed, or fabricated activity is not treated as new value.
 
 The relative importance of these dimensions remains research-sensitive and may vary by use case. Exact weights, thresholds, and detection methods are intentionally not public.
+
+## Reward routing
+
+A single task records each role separately: the requester, the executor, the validator, the block proposer, and the beneficiary. One owner's phone may request work while that owner's home computer performs it, or the phone may do the work itself.
+
+- Only an accepted contribution proof earns credit, and only for the wallet it is bound to.
+- All devices of one wallet count as one participant, so extra devices do not multiply influence or selection chances.
+- Credit for data follows the path it travelled: the first use earns discovery credit, and later uses credit back along the path. See [Proof of data](../thesis.md).
+
+Today routing exists only in simulated accounting, and sending credit to a different beneficiary is not yet implemented. See [Wallet and devices](../architecture/wallet_devices.md).
 
 ## Contribution flow
 

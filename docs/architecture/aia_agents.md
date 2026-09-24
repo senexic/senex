@@ -1,6 +1,12 @@
+---
+title: "AIA: local-first personal intelligence"
+sidebar_label: AIA
+description: What AIA (Artificial Intelligent Assistant) does for its owner, its current capability boundary, and its permission model.
+---
+
 # AIA: Local-First Personal Intelligence
 
-AIA is the user-facing foundation of SENEX. Its purpose is to help a person work with their own context while keeping control, visibility, and consent close to the point where that context is used.
+AIA (Artificial Intelligent Assistant) is the user-facing foundation of SENEX. Its purpose is to help a person work with their own context while keeping control, visibility, and consent close to the point where that context is used.
 
 :::info Working foundation
 Local execution, local context handling, user-directed workflows, and governed-sharing foundations are under active development. Availability and maturity may vary by platform and build; this page describes the intended product boundary, not a universal production guarantee.
@@ -23,18 +29,19 @@ Each item remains subject to build-specific testing and release qualification:
 
 | Area | Public capability boundary |
 | --- | --- |
-| Owner authority | An owner-controlled identity direction that does not depend on a centralized SENEX account |
-| Authorized devices | Multiple separately admitted devices with a foundation for bounded authority and revocation |
-| Local intelligence | Local model execution and lifecycle foundations for supported configurations |
+| Owner authority | One owner wallet; ownership never depends on a login or a SENEXIC account |
+| Authorized devices | A separate key for each device, a wallet-signed credential, and revocation per device. See [Wallet and devices](wallet_devices.md) |
+| Local intelligence | A managed local inference engine; the owner supplies a model or explicitly approves a download |
 | Governed knowledge | Local retrieval, memory, provenance, and answer-evidence foundations |
-| Protected content | Encrypted local content-storage foundations; complete device security still depends on the surrounding environment |
-| Product surfaces | Desktop, local API, command-line, and mobile foundations at different stages of maturity |
-| Admitted collaboration | Permission-bounded interaction between participants that have been explicitly admitted |
-| Contribution research | Foundations for Proof of Data, Proof of Computation, Proof of Intel, provider-marketplace simulation, and test-only accounting |
+| Protected content | Encrypted local storage and wallet keys sealed by default; complete device security still depends on the surrounding environment |
+| Product surfaces | Desktop, local API, and command line; mobile pairing foundations with the mobile app in development |
+| Admitted collaboration | Permission-bounded interaction between explicitly admitted participants, tested between processes on one machine |
+| Contribution research | Proof of Data, Proof of Computation, and Proof of Intel records with simulated accounting |
 
 “Foundation” is intentionally narrow. It indicates demonstrated development
 groundwork for a stated scope, not universal platform support, production
-assurance, or a public network service.
+assurance, or a public network service. [Current status](../status.md) lists
+what is and is not claimed.
 
 ## Trust and permission model
 
@@ -53,7 +60,7 @@ The intended result is bounded disclosure: return what is useful for the approve
 AIA does not require a live public blockchain to provide local value. The future [V1-testnet coordination layer](intelligent_chain.md) is intended to test authenticated cooperation, consistent event records, and contribution-aware workflows between independent participants.
 
 :::caution V1-testnet target
-Network participation, contribution records, and test value remain future testnet capabilities. They are not production services, financial assets, or evidence of a live token economy.
+Network participation, contribution records, and test value remain future testnet capabilities. They are not production services, financial assets, or evidence of a live contribution economy.
 :::
 
 A possible V1 production network would be a fresh-genesis system, launched only after separate security, operational, and governance decisions. Testnet identity, state, or value would not automatically carry over.

@@ -1,7 +1,13 @@
+---
+title: Governance model
+sidebar_label: Governance
+description: How SENEX decisions are classified, reviewed, recorded, and contested, and how governance is expected to evolve toward V1.
+---
+
 # Governance Model
 
 :::warning Governance is not live
-SENEX does not currently operate a public DAO or token-holder governance system. ASHA is simulated and test-only, so it grants no voting rights. Governance work is focused on accountable decision processes for a local-first system under development toward a future V1-testnet.
+SENEX does not currently operate a public DAO or holder-based governance system. In the software, ASHA is simulated accounting and grants no voting rights. Governance work is focused on accountable decision processes for a local-first system under development toward a future V1-testnet.
 :::
 
 Governance is the process for deciding what the system may do, who is responsible, how changes are reviewed, and how harmful decisions are corrected. It must cover product, data, security, network, and contribution policies—not only software upgrades.
@@ -75,17 +81,17 @@ These are design goals, not a claim of certification or legal compliance.
 
 ## Safeguards against capture
 
-Future governance research must address concentration, coordinated influence, voter fatigue, hidden conflicts, inaccessible participation, and emergency powers that become permanent. Token ownership alone is not treated as proof of expertise, legitimacy, or public interest.
+Future governance research must address concentration, coordinated influence, voter fatigue, hidden conflicts, inaccessible participation, and emergency powers that become permanent. Holdings alone are not treated as proof of expertise, legitimacy, or public interest.
 
 The system should prefer limited mandates, transparent reasoning, separation of duties, auditable policy versions, and periodic review of delegated authority. Sensitive security details and personal information should remain protected even when the existence and rationale of a decision are public.
 
 ## Relationship to V1
 
-V1-testnet would be a test environment, not a source of permanent governance rights. Participation, test records, and simulated ASHA activity would not carry into V1. A future V1 production network would require a fresh governance mandate, fresh operating terms, and evidence from external validation.
+V1-testnet would be a test environment, not a source of permanent governance rights. Participation, test records, and simulated ASHA activity would not carry into V1. A future V1 production network would require a fresh governance mandate, fresh operating terms, and evidence from external validation. The intended direction is that, at V1, stewardship moves to an independent body rather than remaining with the founding team.
 
 Related reading:
 
-- [Contribution Economy Research](tokenomics/index.md)
+- [ASHA and contribution](tokenomics/index.md)
 - [Economic Integrity](tokenomics/security.md)
 - [Network Transition & Upgrade Policy](migration.md)
 - [Roadmap](roadmap.md)

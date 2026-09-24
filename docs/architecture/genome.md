@@ -1,9 +1,15 @@
+---
+title: "GENOME: collective intelligence research"
+sidebar_label: GENOME
+description: GENOME is the SENEX research direction on collective intelligence formed by connected agents, governed data, computation, proofs, and outcomes.
+---
+
 # GENOME: Collective Intelligence Research
 
-GENOME is SENEX’s long-horizon research direction: investigating whether independently controlled AIA participants can cooperate to produce useful shared intelligence without collapsing ownership, consent, or accountability into a central system.
+GENOME is SENEX’s name for the collective intelligence that connected agents, governed data, computation, proofs, and outcomes may form. It is a long-horizon research direction: investigating whether independently controlled AIA participants can cooperate to produce useful shared intelligence without collapsing ownership, consent, or accountability into a central system.
 
 :::note Research direction
-GENOME is post-V1 research. It is not a deployed network mind, a current shared model, an implemented training pipeline, or a claim of artificial general intelligence.
+GENOME builds on V1 foundations. Today it exists only as a local, privacy-preserving graph projection inside AIA. It is not a deployed network mind, a current shared model, an implemented training pipeline, or a claim of artificial general intelligence.
 :::
 
 ## Research question

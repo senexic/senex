@@ -1,3 +1,8 @@
+---
+title: Innovation
+description: The capability-level summary of what SENEX is trying to do differently, from local-first intelligence to accountable coordination.
+---
+
 # Innovation
 
 SENEX’s central product thesis is that useful intelligence can begin under individual control and later support accountable cooperation without requiring users to surrender unrestricted personal context. Public documentation describes the capabilities and research questions while keeping proprietary constructions and security-sensitive details private.
@@ -23,10 +28,10 @@ The public concept sometimes described as a **neurolink** refers to this governe
 The future Intelligent Chain is intended to test whether accepted events and useful contributions can be coordinated consistently among independent participants. Public claims remain at the outcome level: authenticated participation, reviewable rules, consistent records, and a path to challenge disputed outcomes.
 
 :::caution V1-testnet target
-Contribution-aware coordination belongs to a future production-candidate testnet. There is no live public blockchain or token economy. Any V1-testnet value will be test-only, and a possible V1 will be a separate fresh-genesis production network.
+Contribution-aware coordination belongs to a future production-candidate testnet. There is no live network or contribution economy. Any V1-testnet value will be test-only, and a possible V1 will be a separate fresh-genesis production network.
 :::
 
-Terms such as **Proof of Intel** may be used to name the research objective of recognizing useful contribution. They do not mean that a public consensus mechanism, reward formula, or production economy is currently deployed.
+Terms such as **Proof of Intel** name the research objective of recognizing useful contribution; the underlying thesis is described in [Proof of data](thesis.md). They do not mean that a public consensus mechanism, reward formula, or production economy is currently deployed.
 
 ## Collective intelligence after V1
 

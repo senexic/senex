@@ -1,3 +1,9 @@
+---
+title: Applications and use cases
+sidebar_label: Applications
+description: Where owner-controlled intelligence is most useful, and the evaluation criteria a SENEX use case must meet.
+---
+
 # Applications & Use Cases
 
 :::info Capability boundary

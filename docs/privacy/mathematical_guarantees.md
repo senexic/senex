@@ -1,3 +1,9 @@
+---
+title: Privacy assurance and evidence
+sidebar_label: Privacy assurance
+description: What a formal privacy claim would require, the evidence levels SENEX uses, and why no formal guarantee is claimed today.
+---
+
 # Privacy Assurance and Evidence
 
 Formal privacy is a property of a precisely defined system under explicit assumptions. It cannot be established by naming a cryptographic technique, publishing an equation, or describing a future architecture. SENEX therefore separates current product controls from research goals and independently validated guarantees.

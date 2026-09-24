@@ -1,132 +1,129 @@
+---
+title: Roadmap
+description: The SENEX milestone path from M0 to V1, the goal of each milestone, and the evidence each must produce before the next begins.
+---
+
 # Roadmap
 
 :::info Outcome-based roadmap
-This roadmap describes evidence and release outcomes, not calendar promises. SENEX has local-first working foundations and is developing toward a future V1-testnet. There is no live public blockchain, token economy, provider settlement, or contribution-reward system.
+This roadmap describes milestones and the evidence that ends each one, not calendar promises. The current milestone is **M0**. There is no public network, and ASHA in the software is simulated accounting only.
 :::
 
-Each stage must produce evidence before the next stage is treated as ready. Research can continue in parallel, but it does not become a product claim until it passes the applicable release gate.
+SENEX moves through six milestones. A milestone ends only when its exit gates pass. Each exit claims only what it proves: finishing a milestone is never a claim that V1 exists.
 
-## Status map
+```mermaid
+flowchart LR
+  M0["M0<br/>Trust foundations"] --> M1["M1<br/>Proof-of-data kernel"]
+  M0 --> M2["M2<br/>Open research"]
+  M1 --> M3["M3<br/>Private beta"]
+  M2 --> M3
+  M3 --> M4["M4<br/>V1-testnet"]
+  M4 --> M5["M5<br/>V1"]
+```
 
-| Status label | Meaning |
-| --- | --- |
-| **Working foundation** | Implemented foundations under active development and controlled evaluation. |
-| **V1-testnet target** | Intended outcome for a future production-candidate test network using test-only value. |
-| **Research direction** | A capability or policy being explored without a release commitment. |
-| **External validation required** | A claim or release gate that must be reviewed independently of the implementing team. |
+## M0 — Trust foundations
 
-## Stage 1 — Strengthen the local-first foundation
+**Status: current milestone**
 
-**Status: Working foundation**
+Goal: make every public statement, stored key, and plan honest and coherent before building further.
 
-The immediate objective is a dependable AIA that provides value while keeping owner control visible.
+Exit gates:
 
-Outcome gates:
+- no public surface makes a claim the software contradicts;
+- a fresh install stores no plaintext wallet key, vault key, or privacy secret; and
+- the full test suite passes on the main branch in continuous integration.
 
-- local behavior is documented for supported configurations;
-- private context and approved external interactions have a clear boundary;
-- users can understand and change relevant permissions;
-- storage, retention, deletion, recovery, and upgrade behavior are testable;
-- failures are visible rather than presented as successful outcomes;
-- security and privacy assumptions match the implementation; and
-- documentation distinguishes implemented behavior from research.
+Exiting M0 claims only trust hygiene. It makes no network, economy, or product-readiness claim.
 
-This stage does not require a token, public chain, provider marketplace, or shared reward system.
+## M1 — Proof-of-data kernel
 
-## Stage 2 — Validate governed interaction
+**Status: Research direction**
 
-**Status: Working foundation moving toward V1-testnet target**
+Goal: show, with real owners on separate internet-connected machines, that value can be measured at the moment data is used, across owners, in a way that is hard to game. See [Proof of data](thesis.md).
 
-The objective is to demonstrate that independently operated AIA systems can interact within bounded, owner-approved policy.
+Planned work includes real peer-to-peer transport, recursive governed access, computation sent to the data, impact scoring when data is first used, settlement that applies exactly once after finality, and detection of poisoned data. Contribution is recorded as points that carry no monetary value.
 
-Outcome gates:
+Exit gates:
 
-- participants can identify the purpose and policy of an interaction before accepting it;
-- authorization can be limited, reviewed, and revoked;
-- outcomes carry sufficient provenance for the use case;
-- replay, duplication, unauthorized expansion, and common failure conditions are tested;
-- disputes and incident reports reach an accountable owner;
-- degraded connectivity and incompatible versions fail safely; and
-- operational observability does not become unnecessary surveillance.
+- real owners on several distinct networks run the kernel for a sustained period;
+- most participants rate the credit they received as fair;
+- a red-team attempt to poison data is detected and loses its credit; and
+- in compute-to-data mode, raw data never leaves its owner's machine, verified by protocol tests and traffic inspection.
 
-## Stage 3 — Prepare the V1-testnet candidate
+## M2 — Open research
+
+**Status: Research direction**
+
+Goal: research the framework SENEX uses to rank knowledge in the open, choose its design on published evidence, and disclose it wherever ranked content appears.
+
+Exit gates:
+
+- the research report is published, including negative results;
+- the design is chosen on that evidence; and
+- every product surface that shows ranked content discloses how it is ranked.
+
+M2 runs alongside M1.
+
+## M3 — Private beta
+
+**Status: Research direction**
+
+Goal: put the kernel into a product ordinary people can use and keep using. Planned work includes signed desktop apps for macOS, Windows, and Linux, a chat-first experience with conversation history, durable local storage, a mobile companion, and an independent security audit of the kernel.
+
+Exit gates:
+
+- a meaningful share of beta users remain active after four weeks;
+- most answers draw on data from other owners, with their contribution credited; and
+- all audit findings on the kernel are closed.
+
+The private beta is not V1-testnet.
+
+## M4 — V1-testnet
 
 **Status: V1-testnet target**
 
-V1-testnet is intended as a production-candidate validation environment, not a production economy.
+Goal: run the complete V1 product and protocol with test-only ASHA and independent validators. Settlement is built on an established consensus framework, not on hand-rolled consensus, and validators operate across several jurisdictions.
 
-Release gates:
+Exit gates:
 
-- a defined release candidate and supported operating policy;
-- documented participant roles and responsibilities;
-- repeatable deployment, upgrade, backup, and recovery procedures;
-- end-to-end tests for authorization, interaction, revocation, failure, and review;
-- test-only contribution records and simulated ASHA clearly isolated from monetary systems;
-- clear notice that test access and state can change or reset;
-- no implication that test activity creates future balances, rewards, or governance rights; and
-- an incident-response and communication process tested before broader participation.
+- every V1-testnet qualification gate, G0 to G13, exits, including a sustained stability period; and
+- independent protocol and economic reviews are complete.
 
-Provider settlement and contribution rewards remain non-live during this stage.
+V1-testnet state never migrates to V1. See [Network transition](migration.md).
 
-## Stage 4 — Adversarial and independent validation
+## M5 — V1
 
 **Status: External validation required**
 
-The objective is evidence strong enough to support or reject a production decision.
+Goal: launch V1 as a separate production network from a fresh genesis, once regulators, independent reviewers, and independent validators allow it.
 
-Validation areas:
+Exit gates:
 
-- implementation security and dependency risk;
-- privacy behavior across content, metadata, logs, and recovery;
-- authorization and revocation under realistic failure;
-- abuse, collusion, identity, and concentration risks;
-- accessibility and usability of consequential controls;
-- reliability, capacity, and degraded-mode behavior;
-- governance, dispute handling, and emergency authority;
-- documentation accuracy and reproducibility; and
-- legal and regulatory suitability for the intended jurisdictions and uses.
+- regulatory clearance is recorded for each launch jurisdiction;
+- the fresh genesis is activated; and
+- independent validators hold the majority.
 
-Findings should be remediated and retested. A testnet that reveals unacceptable risk has succeeded as a test; it should not be promoted merely to preserve a schedule.
-
-## Stage 5 — Decide whether to launch V1
-
-**Status: Research direction; external validation required**
-
-V1 is not an automatic continuation of V1-testnet. It would require an explicit production decision based on evidence, a defined scope, fresh terms, accountable operators, and an approved governance model.
-
-If approved:
-
-- V1 begins as a separate **fresh-genesis** production network;
-- V1-testnet balances, state, simulated ASHA, recognition, and governance positions do not migrate;
-- user-controlled local content may be portable only through an explicit, documented import process;
-- production claims are limited to capabilities supported by release evidence; and
-- any economic function receives separate security, operational, accounting, and legal review.
-
-If the evidence does not support production, the design should remain in research or be revised.
+Any live use of ASHA depends on these gates and is described in the SENEX white paper, not in these docs. See [ASHA and contribution](tokenomics/index.md).
 
 ## Longer-term research
 
 **Status: Research direction**
 
-Potential research includes:
+- [GENOME](architecture/genome.md): collective intelligence across independently governed participants.
+- Open, permissionless admission that resists Sybil identities.
+- Formal privacy for multi-party cooperation.
+- Knowledge generation as the main measure of value.
 
-- privacy-preserving collective intelligence;
-- accountable service discovery among independently operated AIAs;
-- verifiable contribution without publishing private context;
-- resilient interoperability across heterogeneous systems;
-- governance that resists capture while preserving local authority; and
-- contribution-economy mechanisms that do not depend on speculation.
+These are directions, not delivery promises.
 
-These directions are not delivery promises. Technical details that would expose proprietary implementation or weaken security are evaluated in controlled documentation, while public pages focus on purpose, boundaries, evidence, and user impact.
+## How progress is reported
 
-## How progress should be reported
-
-Progress updates should name the release or test, state what was actually evaluated, publish limitations, and distinguish internal results from independent findings. Dates, scale claims, and performance claims should appear only when backed by reproducible evidence.
+Progress updates name the milestone and the gate, state what was actually evaluated, publish limitations, and separate internal results from independent findings. [Current status](status.md) is updated when the software changes. Dates, scale, and performance claims appear only when backed by reproducible evidence.
 
 Related pages:
 
-- [Applications & Use Cases](applications.md)
-- [Scalability & Performance](scalability.md)
-- [Governance Model](governance.md)
-- [Network Transition & Upgrade Policy](migration.md)
-- [Contribution Economy Research](tokenomics/index.md)
+- [Current status](status.md)
+- [Applications and use cases](applications.md)
+- [Scalability and performance](scalability.md)
+- [Governance model](governance.md)
+- [Network transition and upgrade policy](migration.md)

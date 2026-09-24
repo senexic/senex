@@ -3,6 +3,9 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   docs: [
     'index',
+    'status',
+    'concepts',
+    'roadmap',
     {
       type: 'category',
       label: 'AIA and architecture',
@@ -10,6 +13,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'architecture/aia_agents',
+        'architecture/wallet_devices',
         'architecture/intelligent_chain',
         'architecture/genome',
       ],
@@ -26,13 +30,25 @@ const sidebars: SidebarsConfig = {
         'privacy/compliance',
       ],
     },
-    'tokenomics/index',
-    'applications',
-    'governance',
-    'innovation',
-    'scalability',
-    'migration',
-    'roadmap',
+    {
+      type: 'category',
+      label: 'Research',
+      collapsed: false,
+      items: ['thesis', 'innovation', 'applications', 'scalability'],
+    },
+    {
+      type: 'category',
+      label: 'ASHA and contribution',
+      link: {type: 'doc', id: 'tokenomics/index'},
+      collapsed: true,
+      items: ['tokenomics/incentives', 'tokenomics/security'],
+    },
+    {
+      type: 'category',
+      label: 'Network policy',
+      collapsed: true,
+      items: ['governance', 'migration'],
+    },
     {
       type: 'category',
       label: 'Research archive',

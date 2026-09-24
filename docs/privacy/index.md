@@ -1,3 +1,8 @@
+---
+title: Privacy and security
+description: The SENEX privacy model, its trust boundaries, and the limits of what is currently assured.
+---
+
 # Privacy and Security
 
 SENEX starts from a local-first boundary: personal context should remain within the user-controlled environment unless the user approves a specific use or exchange. The goal is not merely to move storage onto a device, but to make data flows purposeful, limited, visible, and revocable.
@@ -32,7 +37,7 @@ See [Privacy Technologies](technologies.md) for the capability-level control fra
 Network privacy behavior is a future test target. V1-testnet will use test-only value and is not a live public blockchain or production privacy service. Its purpose is to expose design and operational failures before any V1 decision.
 :::
 
-Advanced collaboration protections remain a [research direction](mathematical_guarantees.md). Public docs do not claim that formal privacy properties, secure collective computation, or anonymity guarantees are currently implemented.
+Protections enforced today include encrypted local storage, wallet keys sealed by default, private file permissions, and a hardened local API; see [Current status](../status.md). Advanced collaboration protections remain a [research direction](mathematical_guarantees.md). Public docs do not claim that formal privacy properties, secure collective computation, or anonymity guarantees are currently implemented.
 
 ## Assurance, not slogans
 

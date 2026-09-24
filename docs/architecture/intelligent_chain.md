@@ -1,9 +1,17 @@
+---
+title: "Intelligent Chain: coordination and accountability"
+sidebar_label: Intelligent Chain
+description: The planned permissioned contribution chain that records accepted contributions among independent SENEX participants.
+---
+
 # Intelligent Chain: Coordination and Accountability
 
 The Intelligent Chain is the planned network layer for coordinating events among independent SENEX participants. Its public purpose is to make accepted actions consistently observable and accountable without turning private user context into public network data.
 
+For V1 the target is a **permissioned contribution chain**: admitted, independent validators record accepted contributions and settle them only after finality. Open, permissionless admission is a separate later decision that depends on published Sybil-resistance research.
+
 :::caution V1-testnet target
-The Intelligent Chain is not a live public blockchain. V1-testnet is a future production-candidate environment intended for integration, security, governance, and operational testing. Any represented value will be test-only and non-monetary.
+The Intelligent Chain is not a live network. Today, contribution records and prepare-and-commit finality run locally on one machine. V1-testnet is a future production-candidate environment intended for integration, security, governance, and operational testing. Any represented value will be test-only and non-monetary.
 :::
 
 ## Intended responsibilities

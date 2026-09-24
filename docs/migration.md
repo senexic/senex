@@ -1,10 +1,16 @@
+---
+title: Network transition and upgrade policy
+sidebar_label: Network transition
+description: How development, V1-testnet, and V1 stay separate, why V1 starts from a fresh genesis, and how upgrades are handled.
+---
+
 # Network Transition & Upgrade Policy
 
-:::danger No live token or chain migration
-There is no deployed public ASHA token, live provider economy, or production SENEX network to migrate. ASHA is simulated and test-only. V1-testnet is a future production-candidate test environment; V1 would be a separate, fresh-genesis production network if approved.
+:::info Nothing to migrate yet
+There is no production SENEX network and no live provider economy. In the software, ASHA is simulated accounting. V1-testnet is a future production-candidate test environment; V1 would be a separate, fresh-genesis production network if approved.
 :::
 
-This page replaces the former token-bridge narrative with the actual transition policy: test environments are for validation, not for creating permanent balances, state, rights, or financial expectations.
+This page sets out the transition policy: test environments are for validation, not for creating permanent balances, state, rights, or financial expectations.
 
 ## Status
 
@@ -73,6 +79,6 @@ Emergency actions may prioritize containment, but they still require documentati
 
 ## No bridge or conversion promise
 
-SENEX does not promise a token bridge, balance snapshot, conversion ratio, claim window, burn-and-mint process, or backward-compatible economic state. Any future production economy would be a separate decision documented only after the necessary validation and legal review.
+SENEX does not promise a bridge, balance snapshot, conversion ratio, claim window, or backward-compatible economic state between environments. Any future production economy would be a separate decision documented only after the necessary validation and legal review.
 
-See the [Contribution Economy Research](tokenomics/index.md) for the current economic boundary and the [Roadmap](roadmap.md) for outcome-based release stages.
+See [ASHA and contribution](tokenomics/index.md) for the current economic boundary and the [Roadmap](roadmap.md) for the milestone path.

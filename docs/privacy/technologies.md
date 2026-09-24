@@ -1,3 +1,9 @@
+---
+title: Privacy controls and technology direction
+sidebar_label: Privacy controls
+description: The layers of privacy control SENEX designs around, and how a control becomes a public claim.
+---
+
 # Privacy Controls and Technology Direction
 
 SENEX describes privacy technology by the protection it should provide, not by publishing a recipe for the underlying implementation. Technology names alone do not establish privacy; controls must be connected to a specific data flow, threat, and body of evidence.

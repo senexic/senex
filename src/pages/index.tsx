@@ -25,24 +25,24 @@ const foundations = [
     eyebrow: 'Working foundation',
     title: 'Proof before value',
     body:
-      'Local simulations explore contribution recognition through evidence and verification. Public settlement and transferable value are not live.',
-    link: '/docs/tokenomics',
-    label: 'Read the economy principles',
+      'Proof of data measures what governed data contributes at the moment it is used. Today recognition runs only in local simulations; nothing carries value.',
+    link: '/docs/thesis',
+    label: 'Read the thesis',
   },
 ];
 
 const maturity = [
   {
     label: 'Working foundation',
-    text: 'Local AIA, governed retrieval and memory, encrypted local content foundations, owner-authorized devices, and local contribution simulations.',
+    text: 'Local AIA, governed retrieval and memory, encrypted local storage, sealed wallet keys, owner-authorized devices, and local contribution simulations.',
   },
   {
     label: 'V1-testnet target',
-    text: 'A production-candidate test environment intended to use test-only value, reviewed releases, and independently evidenced behavior.',
+    text: 'The complete V1 product and protocol as a production candidate, with test-only ASHA, independent validators, and fourteen qualification gates.',
   },
   {
     label: 'Research direction',
-    text: 'Intelligent Chain verification and settlement, followed by post-V1 exploration of collective intelligence through GENOME.',
+    text: 'The proof-of-data kernel across real owners, open ranking research, and collective intelligence through GENOME.',
   },
 ];
 
@@ -69,13 +69,12 @@ function HomepageHeader() {
             </Link>
             <Link
               className="button button--outline button--secondary button--lg"
-              to="/docs/roadmap">
+              to="/docs/status">
               View current status
             </Link>
           </div>
           <p className={styles.heroDisclosure}>
-            No live public blockchain · No transferable token · No public reward
-            economy
+            Local-first today · Simulated ASHA accounting · Current milestone: M0
           </p>
         </div>
       </div>

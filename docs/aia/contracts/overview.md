@@ -5,9 +5,9 @@ description: Historical context for retired AIA Chain contract research.
 
 # Experimental coordination contracts — archived
 
-:::danger No live contract or token
-SENEXIC does not currently operate a public AIA Chain contract, live token, or
-public reward network. This route is retained only for historical continuity.
+:::caution Archived research
+This route is retained only for historical continuity. It does not describe a
+current contract, network, or reward system.
 :::
 
 An early prototype used test-network contracts to explore coordination,
@@ -28,4 +28,4 @@ The current SENEXIC direction separates:
   and legal review.
 
 Read the [Intelligent Chain direction](../../architecture/intelligent_chain.md)
-or the [contribution-economy research overview](../../tokenomics/index.md).
+or [ASHA and contribution](../../tokenomics/index.md).
