@@ -34,7 +34,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Research',
       collapsed: false,
-      items: ['thesis', 'applications', 'scalability'],
+      items: ['thesis', 'applications', 'scalability', 'experiments'],
     },
     {
       type: 'category',

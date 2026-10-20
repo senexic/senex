@@ -242,6 +242,7 @@ const config: Config = {
             {label: 'Proof of Data', to: '/docs/thesis'},
             {label: 'GENOME', to: '/docs/architecture/genome'},
             {label: 'ASHA and contribution accounting', to: '/docs/asha'},
+            {label: 'Experiments', to: '/docs/experiments'},
           ],
         },
         {
