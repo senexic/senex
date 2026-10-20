@@ -24,11 +24,13 @@
 
 .heroInner {
   max-width: 58rem;
+  font-family: var(--senex-font-brand);
 }
 
 .eyebrow,
 .cardEyebrow {
   margin-bottom: 1rem;
+  font-family: var(--senex-font-brand);
   color: #7be0d2;
   font-size: 0.74rem;
   font-weight: 700;
@@ -40,9 +42,9 @@
   max-width: 56rem;
   margin: 0;
   color: #f5f8ff;
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  font-size: clamp(3rem, 8vw, 6.25rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .heroTitle span {
@@ -108,7 +110,7 @@
   color: #f3f6fc;
   font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.08;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.015em;
 }
 
 .sectionIntro p,

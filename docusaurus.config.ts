@@ -35,6 +35,25 @@ const config: Config = {
 
   headTags: [
     {
+      tagName: 'link',
+      attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap',
+      },
+    },
+    {
       tagName: 'script',
       attributes: {type: 'application/ld+json'},
       innerHTML: JSON.stringify({
@@ -110,12 +129,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/aiapng.png',
+    image: 'img/social-card.png',
     metadata: [
       {
         name: 'keywords',
         content:
-          'SENEX, SENEXIC, AIA, local-first AI, proof of data, GENOME, ASHA, V1-testnet',
+          'SENEX, SENEXIC, SENEX Intelligent Chain, AIA, local-first AI, Proof of Data, GENOME, ASHA, V1-testnet',
       },
       {name: 'twitter:card', content: 'summary_large_image'},
     ],
@@ -148,7 +167,15 @@ const config: Config = {
           lineColor: '#74ddcf',
           clusterBkg: '#0e1726',
           clusterBorder: 'rgba(173, 194, 222, 0.25)',
-          fontFamily: 'Inter, ui-sans-serif, sans-serif',
+          noteBkgColor: '#18263d',
+          noteTextColor: '#eef4fb',
+          noteBorderColor: '#74ddcf',
+          actorBkg: '#101a2b',
+          actorBorder: '#74ddcf',
+          actorTextColor: '#eef4fb',
+          signalColor: '#c5cede',
+          signalTextColor: '#eef4fb',
+          fontFamily: '"Titillium Web", ui-sans-serif, system-ui, sans-serif',
           fontSize: '15px',
         },
       },
@@ -173,8 +200,19 @@ const config: Config = {
         {to: '/docs/privacy', label: 'Trust', position: 'left'},
         {to: '/docs/roadmap', label: 'Roadmap', position: 'left'},
         {type: 'search', position: 'right'},
-        {href: 'https://senexic.io', label: 'Platform', position: 'right'},
-        {href: 'https://senexic.com', label: 'senexic.com', position: 'right'},
+        {href: 'https://senexic.com/whitepaper/', label: 'Whitepaper', position: 'right'},
+        {
+          href: 'https://senexic.io',
+          label: 'Platform',
+          position: 'right',
+          className: 'navbar-item--wide-only',
+        },
+        {
+          href: 'https://senexic.com',
+          label: 'senexic.com',
+          position: 'right',
+          className: 'navbar-item--wide-only',
+        },
       ],
     },
     footer: {
@@ -192,9 +230,10 @@ const config: Config = {
         {
           title: 'Trust',
           items: [
-            {label: 'Privacy posture', to: '/docs/privacy'},
-            {label: 'Assurance', to: '/docs/privacy/compliance'},
-            {label: 'Limitations', to: '/docs/privacy/threat_model'},
+            {label: 'Privacy and security', to: '/docs/privacy'},
+            {label: 'Privacy assurance and evidence', to: '/docs/privacy/mathematical_guarantees'},
+            {label: 'Security threat model', to: '/docs/privacy/threat_model'},
+            {label: 'Compliance and responsible data use', to: '/docs/privacy/compliance'},
           ],
         },
         {
@@ -209,6 +248,7 @@ const config: Config = {
           title: 'SENEXIC',
           items: [
             {label: 'Main website', href: 'https://senexic.com'},
+            {label: 'Whitepaper', href: 'https://senexic.com/whitepaper/'},
             {label: 'Platform', href: 'https://senexic.io'},
             {label: 'GitHub', href: 'https://github.com/senexic'},
           ],

@@ -9,7 +9,7 @@ const foundations = [
     eyebrow: 'Working foundation',
     title: 'Local-first AIA',
     body:
-      'AIA is being built to operate around the owner, use approved local resources, and keep sensitive context under explicit control.',
+      'AIA runs on the owner\'s devices, uses approved local resources, and keeps sensitive context under explicit control.',
     link: '/docs/architecture/aia_agents',
     label: 'Explore AIA',
   },
@@ -22,10 +22,10 @@ const foundations = [
     label: 'Review the trust model',
   },
   {
-    eyebrow: 'Working foundation',
+    eyebrow: 'Research direction',
     title: 'Proof before value',
     body:
-      'Proof of data measures what governed data contributes at the moment it is used. Today recognition runs only in local simulations; nothing carries value.',
+      'Proof of Data measures what governed data contributes at the moment it is used. Today recognition runs only in local simulations; nothing carries value.',
     link: '/docs/thesis',
     label: 'Read the thesis',
   },
@@ -34,15 +34,15 @@ const foundations = [
 const maturity = [
   {
     label: 'Working foundation',
-    text: 'Local AIA, governed retrieval and memory, encrypted local storage, sealed wallet keys, owner-authorized devices, and local contribution simulations.',
+    text: 'Local AIA, governed retrieval and memory, encrypted local storage, sealed wallet keys, owner-authorized devices, wallet backup, and Right to Exit export.',
   },
   {
     label: 'V1-testnet target',
-    text: 'The complete V1 product and protocol as a production candidate, with test-only ASHA, independent validators, and fourteen qualification gates.',
+    text: 'The complete V1 product and protocol as a production candidate: networking across machines, proofs and finality, test-only ASHA, independent validators, and fourteen qualification gates.',
   },
   {
     label: 'Research direction',
-    text: 'The proof-of-data kernel across real owners, open ranking research, and collective intelligence through GENOME.',
+    text: 'The Proof of Data kernel across real owners, ASHA accounting design, open ranking research, and collective intelligence through GENOME.',
   },
 ];
 
@@ -51,14 +51,15 @@ function HomepageHeader() {
     <header className={styles.hero}>
       <div className="container">
         <div className={styles.heroInner}>
-          <div className={styles.eyebrow}>SENEX / AIA</div>
+          <div className={styles.eyebrow}>Power of Equality</div>
           <Heading as="h1" className={styles.heroTitle}>
             Sovereign intelligence,
             <span> built around the owner.</span>
           </Heading>
           <p className={styles.heroSubtitle}>
-            AIA is SENEXIC&apos;s local-first intelligence direction: owner-controlled
-            context, governed knowledge, and verifiable contribution—with a clear
+            AIA — Artificial Intelligent Assistant — is the local-first foundation
+            of SENEX Intelligent Chain: owner-controlled context, governed
+            knowledge, and research into verifiable contribution, with a clear
             boundary between working foundations and future network goals.
           </p>
           <div className={styles.heroActions}>
@@ -85,8 +86,8 @@ function HomepageHeader() {
 export default function Home() {
   return (
     <Layout
-      title="SENEXIC — AIA documentation"
-      description="Public capability, trust, and maturity documentation for SENEXIC and AIA.">
+      title="AIA and SENEX Intelligent Chain documentation"
+      description="Public capability, trust, and status documentation for SENEX Intelligent Chain and AIA.">
       <HomepageHeader />
       <main>
         <section className={styles.statusSection} aria-labelledby="maturity-heading">
@@ -180,7 +181,7 @@ export default function Home() {
           <div className="container">
             <div className={styles.closingPanel}>
               <div>
-                <div className={styles.eyebrow}>Power of Equality</div>
+                <div className={styles.eyebrow}>SENEX Intelligent Chain</div>
                 <Heading as="h2">Build capability without surrendering agency.</Heading>
               </div>
               <div className={styles.closingActions}>
