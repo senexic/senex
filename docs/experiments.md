@@ -15,7 +15,7 @@ The experiments are not the SENEX product and are not AIA. Nothing in them has v
 | --- | --- | --- | --- |
 | [Agents over a chain, with a fee](https://aia.senexic.io) | Asking agents for answers over a chain and paying per answer | Polygon Amoy testnet (test tokens) | Experiment |
 | [AIA on TON](https://aiat.senexic.io) | AIA answering through the TON blockchain and the Cocoon inference network | TON and Cocoon (connection paused) | Paused; interface and design only |
-| [QAIA — quantum branching](#qaia--quantum-branching) | One question branching into several candidate answers, with a measurement choosing which ones surface | None (simulated measurement; no quantum backend) | Concept · not running; screenshots only |
+| [QAIA — quantum branching](#qaia--quantum-branching) | One question branching into several candidate answers, with a measurement choosing which ones surface | App: simulated measurement. Routing circuit: IBM Quantum ibm_fez, run separately | Concept; routing circuit run on IBM hardware |
 
 ## Agents over a chain, with a fee
 
@@ -55,7 +55,7 @@ An early prototype exploring how AIA — Artificial Intelligent Assistant — co
 
 ## QAIA — quantum branching
 
-*Concept · not running* · screenshots only
+*Concept · not running* · routing circuit run on IBM Quantum hardware
 
 A 2025 concept prototype. One question branches into several candidate answers, and a quantum measurement chooses which branches surface, with the circuit shown alongside. In the prototype the selection step used a simulated measurement; a quantum backend was not connected. Screenshots show the prototype interface with example content.
 
@@ -63,7 +63,7 @@ How the prototype was put together:
 
 - A language model (zephyr-7b, through Hugging Face) generated several candidate answers to one prompt.
 - The interface showed a main response, the other branches as "Quantum Branching Answers", and a circuit panel with the measurement and shot count.
-- The circuits were OpenQASM text templates (Hadamard superposition, Grover, QFT). They were displayed, not run: the selection used a pseudo-random number in place of a measurement, and no IBM Quantum backend was ever connected.
+- The circuits were OpenQASM text templates (Hadamard superposition, Grover, QFT). In the app they were displayed, not run: the selection used a pseudo-random number in place of a measurement, and the app never called an IBM Quantum backend.
 - QAIA is not deployed and has no live session. It is a concept for how branching answers could be presented.
 
 ![QAIA prototype: the question "How should I plan a week of study for an exam?" with a main answer and three branching answers labelled Topic-first, Practice-first and Rhythm-first](/img/experiments/qaia-dark-branching.webp)
@@ -77,6 +77,59 @@ How the prototype was put together:
 ![QAIA prototype input box with the partial question "How should I plan" and a dropdown of three suggested completions, accepted with the Tab key](/img/experiments/qaia-dark-autocomplete.webp)
 
 *Prototype interface shown in a dark theme, example content: suggested completions while typing.*
+
+### Run on IBM Quantum hardware
+
+The routing circuit was run on IBM Quantum hardware, separately from the app. The 2025 QAIA app itself used a simulated measurement and never called IBM.
+
+The idea being tested is simple: quantum randomness chooses between answer routes. Two qubits are put into an equal superposition and measured, and the two resulting bits pick one of four routes for answering a question. This makes no claim of quantum advantage; the measurement is only a source of randomness for the choice.
+
+- **Backend:** ibm_fez
+- **Processor:** IBM Heron r2, 156 qubits
+- **Date:** 20 October 2026
+- **Shots:** 1,024
+- **Job ID:** `dbbnng7i0auc73940qs0`
+- **QPU time:** 2 s
+
+The circuit uses four qubits. Qubits q0 and q1 choose the route. Qubits q2 and q3 go through controlled-X and phase gates linked to q0 and q1; in the ideal case these leave all 16 four-bit outcomes equally likely.
+
+```text title="QAIA routing circuit (OpenQASM 2.0)"
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[4];
+creg c[4];
+h q[0];
+h q[1];
+h q[2];
+h q[3];
+cx q[0],q[2];
+cx q[1],q[3];
+rz(pi/2) q[2];
+rz(-pi/2) q[3];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+measure q[2] -> c[2];
+measure q[3] -> c[3];
+```
+
+The route is read from the bits of q1 and q0 (the last two bits of each outcome). Out of 1,024 shots on ibm_fez:
+
+| Route | Bits (q1 q0) | Shots | Share | Ideal |
+| --- | --- | ---: | ---: | ---: |
+| A · Direct | 00 | 273 | 26.7% | 25% |
+| B · Reasoning | 01 | 256 | 25.0% | 25% |
+| C · Tool-assisted | 10 | 270 | 26.4% | 25% |
+| D · Fallback | 11 | 225 | 22.0% | 25% |
+
+Each route was picked close to a quarter of the time. With 1,024 shots, sampling alone (shot noise) moves each share by about 1.4 percentage points, and readout and gate errors on real hardware add a little more, which is why the shares are not exactly 25%.
+
+![Histogram of all 16 four-bit measurement outcomes from 0000 to 1111 on IBM ibm_fez, each between 47 and 91 counts out of 1024 shots](/img/experiments/ibm-fez-histogram.webp)
+
+*Measurement outcomes for all four qubits, IBM ibm_fez, job dbbnng7i0auc73940qs0*
+
+![IBM Quantum Platform job status card: Completed, created 20 October 2026 at 6:03 PM, pending 29 minutes 32 seconds, completed at 6:33 PM, total usage 2 seconds](/img/experiments/ibm-fez-status.webp)
+
+*Job status on IBM Quantum Platform*
 
 ## How experiments relate to SENEX
 
