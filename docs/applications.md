@@ -4,22 +4,15 @@ sidebar_label: Applications
 description: Where owner-controlled intelligence is most useful, and the evaluation criteria a SENEX use case must meet.
 ---
 
-# Applications & Use Cases
+# Applications and use cases
+
+This page looks at where owner-controlled intelligence could be most useful, and at the criteria a SENEX use case must meet before it moves forward.
 
 :::info Capability boundary
-SENEX has local-first working foundations and is developing toward a future V1-testnet. The scenarios below are product directions, not claims of production availability, regulatory compliance, clinical effectiveness, financial performance, or network-scale deployment.
+Local-first [AIA](concepts.md#aia) is a working foundation. Governed interactions among authorized participants are a V1-testnet target, and collective intelligence, provider coordination, and cross-organization uses are research directions. The scenarios below are product directions, not claims of production availability, regulatory compliance, clinical effectiveness, financial performance, or network-scale deployment. Status labels are defined in [Current status](status.md#status-labels).
 :::
 
 The strongest use cases for AIA are those where personal or organizational context is valuable but should remain under the owner's control. Local-first operation can provide immediate utility; governed interaction can later enable bounded collaboration when participants explicitly choose it.
-
-## Status
-
-| Status label | Scope |
-| --- | --- |
-| **Working foundation** | Local-first AIA behavior and owner-controlled context are the present foundation. |
-| **V1-testnet target** | Test governed interactions among authorized participants in a production-candidate environment using test-only value. |
-| **Research direction** | Collective intelligence, verified contribution, provider coordination, and cross-organization applications. |
-| **External validation required** | Domain safety, security, privacy, accessibility, legal suitability, and claims of real-world effectiveness. |
 
 ## A safe use-case pattern
 
@@ -111,4 +104,9 @@ Use cases should advance only when testing can answer:
 - Are non-participants and vulnerable groups protected?
 - Does the application work accessibly across relevant devices and contexts?
 
-For system boundaries, see [Architecture](architecture/index.md). For privacy expectations, see [Privacy & Security](privacy/index.md). For staged validation, see the [Roadmap](roadmap.md).
+## Related pages
+
+- [Architecture overview](architecture/index.md)
+- [Privacy and security](privacy/index.md)
+- [Scalability and performance](scalability.md)
+- [Roadmap](roadmap.md)

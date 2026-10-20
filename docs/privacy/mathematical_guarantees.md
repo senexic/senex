@@ -4,12 +4,12 @@ sidebar_label: Privacy assurance
 description: What a formal privacy claim would require, the evidence levels SENEX uses, and why no formal guarantee is claimed today.
 ---
 
-# Privacy Assurance and Evidence
+# Privacy assurance and evidence
 
 Formal privacy is a property of a precisely defined system under explicit assumptions. It cannot be established by naming a cryptographic technique, publishing an equation, or describing a future architecture. SENEX therefore separates current product controls from research goals and independently validated guarantees.
 
 :::info Working foundation
-The current AIA foundation emphasizes local context handling, deliberate exchange, and user control. These are meaningful design constraints, but they do not constitute a mathematical privacy guarantee.
+The current AIA foundation provides local context handling, deliberate exchange, and user control for the scope in [Current status](../status.md). These are meaningful design constraints, but they do not constitute a mathematical privacy guarantee.
 :::
 
 ## What a formal claim would require
@@ -40,7 +40,7 @@ SENEX uses the following public distinction:
 Only evidence from the relevant build and deployment should be used. Roadmap text, laboratory prototypes, and testnet observations cannot be promoted into V1 guarantees without a new assessment.
 
 :::caution V1-testnet target
-V1-testnet is intended to generate evidence about real integration and operational behavior using test-only value. It is not itself a formal privacy guarantee and will not automatically transfer its state or assurance to a future V1 network.
+V1-testnet is intended to generate evidence about real integration and operational behavior using test-only ASHA. It is not itself a formal privacy guarantee, and its state and assurance do not transfer to V1.
 :::
 
 ## Research boundary
@@ -52,3 +52,9 @@ No current SENEX documentation should be interpreted as proof of anonymity, non-
 :::
 
 This evidence-first approach is deliberately conservative: it gives users a way to distinguish what is intended, what is implemented, and what has actually been validated.
+
+## Related pages
+
+- [Privacy and security](index.md)
+- [Privacy controls and technology direction](technologies.md)
+- [Security threat model](threat_model.md)

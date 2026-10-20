@@ -4,12 +4,12 @@ sidebar_label: Compliance
 description: What SENEX's local-first design can and cannot establish about legal compliance, and who is responsible for what.
 ---
 
-# Compliance and Responsible Data Use
+# Compliance and responsible data use
 
-SENEX’s local-first direction can support data minimization and user control, but architecture alone does not establish legal compliance. Applicable duties depend on the operator, user population, purpose, jurisdiction, data category, deployment, and contracts surrounding a specific use.
+SENEX's local-first direction can support data minimization and user control, but architecture alone does not establish legal compliance. Applicable duties depend on the operator, user population, purpose, jurisdiction, data category, deployment, and contracts surrounding a specific use.
 
 :::info Working foundation
-AIA is being developed around local context, deliberate exchange, and user-directed permissions. These product principles may support responsible data handling, but SENEX does not currently claim regulatory certification or approval for a regulated workload.
+AIA is built around local context, deliberate exchange, and user-directed permissions. These product principles may support responsible data handling, but SENEX does not currently claim regulatory certification or approval for a regulated workload.
 :::
 
 ## Compliance-by-design goals
@@ -41,10 +41,10 @@ SENEX documentation and software behavior should support those decisions without
 
 ## Regulated and sensitive contexts
 
-Health, financial, employment, education, children’s data, biometric information, and other sensitive categories may require additional controls, agreements, notices, assessments, or prohibitions. A local-first workflow is not automatically suitable for these contexts.
+Health, financial, employment, education, children's data, biometric information, and other sensitive categories may require additional controls, agreements, notices, assessments, or prohibitions. A local-first workflow is not automatically suitable for these contexts.
 
 :::caution V1-testnet target
-V1-testnet is a future test environment with test-only value. It is not approved for production personal data, regulated processing, or financial activity. A future V1 would require a separate fresh-genesis launch decision and deployment-specific legal review.
+V1-testnet is a planned test environment with test-only ASHA. It is not approved for production personal data, regulated processing, or financial activity. V1, the planned production network, launches from a fresh genesis only after V1-testnet evidence, external review, and deployment-specific legal review.
 :::
 
 ## Claims and evidence
@@ -55,4 +55,8 @@ Compliance statements should identify the exact product version, deployment scop
 No current page represents legal advice, certification, an audit opinion, or a claim of compliance with a named privacy, security, healthcare, financial, or child-protection regime. Independent legal and technical assessment is required before a deployment makes such a claim.
 :::
 
-See [Privacy and Security](index.md), [Privacy Assurance](mathematical_guarantees.md), and the [Threat Model](threat_model.md) for related boundaries.
+## Related pages
+
+- [Privacy and security](index.md)
+- [Privacy assurance and evidence](mathematical_guarantees.md)
+- [Security threat model](threat_model.md)

@@ -5,15 +5,17 @@ description: The SENEX milestone path from M0 to V1, the goal of each milestone,
 
 # Roadmap
 
+This page sets out the path from today's local-first foundation to V1: six milestones, the goal of each, and the evidence that must exist before the next one begins.
+
 :::info Outcome-based roadmap
-This roadmap describes milestones and the evidence that ends each one, not calendar promises. The current milestone is **M0**. There is no public network, and ASHA in the software is simulated accounting only.
+This roadmap describes milestones and the evidence that ends each one, not calendar promises. The current milestone is **M0**. There is no public network, and [ASHA](concepts.md#asha) in the software is simulated accounting only.
 :::
 
 SENEX moves through six milestones. A milestone ends only when its exit gates pass. Each exit claims only what it proves: finishing a milestone is never a claim that V1 exists.
 
 ```mermaid
 flowchart LR
-  M0["M0<br/>Trust foundations"] --> M1["M1<br/>Proof-of-data kernel"]
+  M0["M0<br/>Trust foundations"] --> M1["M1<br/>Proof of Data kernel"]
   M0 --> M2["M2<br/>Open research"]
   M1 --> M3["M3<br/>Private beta"]
   M2 --> M3
@@ -35,11 +37,11 @@ Exit gates:
 
 Exiting M0 claims only trust hygiene. It makes no network, economy, or product-readiness claim.
 
-## M1 — Proof-of-data kernel
+## M1 — Proof of Data kernel
 
 **Status: Research direction**
 
-Goal: show, with real owners on separate internet-connected machines, that value can be measured at the moment data is used, across owners, in a way that is hard to game. See [Proof of data](thesis.md).
+Goal: show, with real owners on separate internet-connected machines, that value can be measured at the moment data is used, across owners, in a way that is hard to game. See [Proof of Data](thesis.md).
 
 Planned work includes real peer-to-peer transport, recursive governed access, computation sent to the data, impact scoring when data is first used, settlement that applies exactly once after finality, and detection of poisoned data. Contribution is recorded as points that carry no monetary value.
 
@@ -82,20 +84,20 @@ The private beta is not V1-testnet.
 
 **Status: V1-testnet target**
 
-Goal: run the complete V1 product and protocol with test-only ASHA and independent validators. Settlement is built on an established consensus framework, not on hand-rolled consensus, and validators operate across several jurisdictions.
+Goal: run [V1-testnet](concepts.md#v1-testnet), the complete V1 product and protocol, with test-only ASHA and independent validators. Settlement is built on an established consensus framework, not on hand-rolled consensus, and validators operate across several jurisdictions.
 
 Exit gates:
 
 - every V1-testnet qualification gate, G0 to G13, exits, including a sustained stability period; and
 - independent protocol and economic reviews are complete.
 
-V1-testnet state never migrates to V1. See [Network transition](migration.md).
+V1-testnet state never migrates to V1. See [Network transition and upgrade policy](migration.md).
 
 ## M5 — V1
 
 **Status: External validation required**
 
-Goal: launch V1 as a separate production network from a fresh genesis, once regulators, independent reviewers, and independent validators allow it.
+Goal: launch V1, the planned production network, from a fresh genesis, once regulators, independent reviewers, and independent validators allow it.
 
 Exit gates:
 
@@ -103,7 +105,17 @@ Exit gates:
 - the fresh genesis is activated; and
 - independent validators hold the majority.
 
-Any live use of ASHA depends on these gates and is described in the SENEX white paper, not in these docs. See [ASHA and contribution](tokenomics/index.md).
+### Gates before any live use of ASHA
+
+Live use of ASHA requires every M4 and M5 exit gate above:
+
+- every V1-testnet qualification gate, G0 to G13, has exited;
+- independent protocol and economic reviews are complete;
+- regulatory clearance is recorded for each launch jurisdiction;
+- V1 starts from a fresh genesis, with nothing carried over from V1-testnet; and
+- independent validators hold the majority.
+
+Economic design for any live use is left to a future edition of the SENEX whitepaper, not to these docs. The current edition is [Edition 2026.1 (September 2026)](https://senexic.com/whitepaper/). See [ASHA and contribution accounting](asha/index.md).
 
 ## Longer-term research
 
@@ -120,10 +132,11 @@ These are directions, not delivery promises.
 
 Progress updates name the milestone and the gate, state what was actually evaluated, publish limitations, and separate internal results from independent findings. [Current status](status.md) is updated when the software changes. Dates, scale, and performance claims appear only when backed by reproducible evidence.
 
-Related pages:
+## Related pages
 
 - [Current status](status.md)
 - [Applications and use cases](applications.md)
 - [Scalability and performance](scalability.md)
 - [Governance model](governance.md)
 - [Network transition and upgrade policy](migration.md)
+- [ASHA and contribution accounting](asha/index.md)

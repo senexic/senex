@@ -3,12 +3,12 @@ title: Architecture overview
 description: The trust boundaries between the owner's AIA, governed exchange, the coordination network, and GENOME research.
 ---
 
-# Architecture Overview
+# Architecture overview
 
 SENEX separates personal intelligence, governed exchange, and network coordination into distinct trust boundaries. This lets each layer be evaluated on its own instead of treating a future network as a prerequisite for useful local software.
 
 :::info Working foundation
-The active foundation is AIA: local-first software for user-directed assistance, local context, and controlled interaction. It is still under development and should not be interpreted as a completed production release.
+The active foundation is [AIA](../concepts.md#aia): local-first software for user-directed assistance, local context, and controlled interaction, implemented and tested for the scope in [Current status](../status.md). It is not a production release.
 :::
 
 ## The system at a glance
@@ -27,17 +27,17 @@ flowchart LR
 
 ### 1. User-controlled environment
 
-[AIA](aia_agents.md) operates at the edge of the system, where the user’s context and decisions originate. Its responsibility is to help the user while maintaining a clear boundary between local material and anything intentionally exchanged with another participant.
+[AIA](aia_agents.md) operates at the edge of the system, where the user's context and decisions originate. Its responsibility is to help the user while maintaining a clear boundary between local material and anything intentionally exchanged with another participant.
 
 The owner's [wallet and devices](wallet_devices.md) anchor this boundary: one wallet, a separate key for each device, and revocation per device.
 
-The user-controlled environment is the primary trust boundary. Local possession does not, by itself, guarantee privacy: device security, operating-system behavior, backups, extensions, and user configuration also matter. SENEX therefore treats clear consent and observable data flow as product requirements rather than relying on the word “local.”
+The user-controlled environment is the primary trust boundary. Local possession does not, by itself, guarantee privacy: device security, operating-system behavior, backups, extensions, and user configuration also matter. SENEX therefore treats clear consent and observable data flow as product requirements rather than relying on the word "local."
 
 ### 2. Governed exchange
 
 When cooperation is useful, the intended model is purpose-bound exchange. A participant should be able to understand what is requested, approve or reject it, limit the scope, and stop future access. Returned information should be bounded to the task rather than exposing an unrestricted source.
 
-Exchange can be recursive: one owner's agent may ask another's, which may ask others, and each hop is governed by the owner of the data at that hop. The research goal is to send computation to the data rather than data to the computation. See [Proof of data](../thesis.md).
+Exchange can be recursive: one owner's agent may ask another's, which may ask others, and each hop is governed by the owner of the data at that hop. The research goal is to send computation to the data rather than data to the computation. See [Proof of Data](../thesis.md).
 
 The exchange layer is a capability boundary, not a promise that every collaboration technique is already implemented or formally private.
 
@@ -46,7 +46,7 @@ The exchange layer is a capability boundary, not a promise that every collaborat
 The [Intelligent Chain](intelligent_chain.md) is the planned coordination and accountability layer. It is intended to record accepted events, support consistent outcomes among participants, and provide evidence for testing contribution-aware processes.
 
 :::caution V1-testnet target
-The coordination network is a future production-candidate test environment. It is not a live public blockchain. Any test value will be non-monetary, and testnet participation will not create a claim on a future production network.
+The coordination network is a planned production-candidate test environment. It is not a live public blockchain. Test-only ASHA has no monetary value, and testnet participation creates no claim on V1.
 :::
 
 ### 4. Collective intelligence research
@@ -55,12 +55,10 @@ The coordination network is a future production-candidate test environment. It i
 
 ## Release boundaries
 
-V1 is one integrated product: desktop, mobile, wallet and devices, governed data, local inference, networking, proofs, a permissioned contribution chain, accounting, marketplace, security, operations, and release. Components are built separately, but none alone is the product.
+Components are built separately, but V1 is one integrated product; the [SENEX documentation](../index.md#product-direction) overview lists what it includes. V1-testnet and V1 are deliberately separate:
 
-V1-testnet and V1 are deliberately separate:
-
-- **V1-testnet target:** the production candidate, running the complete V1 product and protocol with test-only ASHA.
-- **V1:** a possible future production network, subject to evidence and approval, launched from a fresh genesis.
+- **V1-testnet:** the production candidate, running the complete V1 product and protocol with test-only ASHA.
+- **V1:** the planned production network, launched from a fresh genesis only after V1-testnet evidence and external review.
 - **GENOME:** research considered after V1 foundations are stable; it is not part of the V1 launch claim.
 
 :::warning External validation required
@@ -68,3 +66,11 @@ Independent review is required before treating network integrity, privacy proper
 :::
 
 Public documentation stays at the component, capability, and trust-boundary level. Internal protocols, thresholds, deployment topology, data schemas, model configuration, and security-sensitive operating details are intentionally excluded.
+
+## Related pages
+
+- [AIA: local-first personal intelligence](aia_agents.md)
+- [Wallet, devices, and contribution roles](wallet_devices.md)
+- [Intelligent Chain: coordination and accountability](intelligent_chain.md)
+- [GENOME: collective intelligence research](genome.md)
+- [Privacy and security](../privacy/index.md)

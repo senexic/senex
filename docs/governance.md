@@ -4,22 +4,15 @@ sidebar_label: Governance
 description: How SENEX decisions are classified, reviewed, recorded, and contested, and how governance is expected to evolve toward V1.
 ---
 
-# Governance Model
+# Governance model
+
+Governance is the process for deciding what the system may do, who is responsible, how changes are reviewed, and how harmful decisions are corrected. It must cover product, data, security, network, and contribution policies, not only software upgrades.
 
 :::warning Governance is not live
-SENEX does not currently operate a public DAO or holder-based governance system. In the software, ASHA is simulated accounting and grants no voting rights. Governance work is focused on accountable decision processes for a local-first system under development toward a future V1-testnet.
+SENEX does not currently operate a public DAO or holder-based governance system. In the software, [ASHA](concepts.md#asha) is simulated accounting and grants no voting rights. Development decisions and controlled testing are managed by the project team, and each owner keeps authority over their own AIA configuration and participation.
 :::
 
-Governance is the process for deciding what the system may do, who is responsible, how changes are reviewed, and how harmful decisions are corrected. It must cover product, data, security, network, and contribution policies—not only software upgrades.
-
-## Status
-
-| Status label | Current meaning |
-| --- | --- |
-| **Working foundation** | Development decisions and controlled testing are managed by the project team. Local owners retain authority over their own AIA configuration and participation. |
-| **V1-testnet target** | Publish versioned operating policies, defined test roles, change notices, incident authority, and feedback or challenge paths for testers. |
-| **Research direction** | Broader representation, delegated responsibility, credible neutrality, and long-term stewardship. |
-| **External validation required** | Security, privacy, legal accountability, conflicts of interest, accessibility, and the effectiveness of appeals. |
+Published operating policies, test roles, change notices, and challenge paths for testers are V1-testnet targets. Broader representation and long-term stewardship are research directions, and the effectiveness of appeals needs external validation. Status labels are defined in [Current status](status.md#status-labels).
 
 ## Governance layers
 
@@ -43,12 +36,16 @@ High-impact claims—especially about security, privacy, fairness, and economic 
 
 Different decisions should not share one undifferentiated voting mechanism.
 
-- **Routine maintenance:** compatible changes with limited user impact.
-- **Material product changes:** changes to behavior, permissions, data use, or user expectations.
-- **Security response:** time-sensitive containment with documented scope and retrospective review.
-- **Network policy:** admission, interoperability, service obligations, and enforcement.
-- **Contribution policy:** eligibility, verification, disputes, and test-only recognition.
-- **Constitutional changes:** changes to decision authority, rights, or the governance process itself.
+| Decision class | What it covers |
+| --- | --- |
+| Routine maintenance | Compatible changes with limited user impact |
+| Material product changes | Changes to behavior, permissions, data use, or user expectations |
+| Security response | Time-sensitive containment, with documented scope and retrospective review |
+| Network policy | Admission, interoperability, service obligations, and enforcement |
+| Contribution policy | Eligibility, verification, disputes, and test-only recognition |
+| Constitutional changes | Changes to decision authority, rights, or the governance process itself |
+
+Each class should have its own assigned authority and a review path proportionate to its risk and reversibility.
 
 ## Proposed decision lifecycle
 
@@ -87,11 +84,11 @@ The system should prefer limited mandates, transparent reasoning, separation of 
 
 ## Relationship to V1
 
-V1-testnet would be a test environment, not a source of permanent governance rights. Participation, test records, and simulated ASHA activity would not carry into V1. A future V1 production network would require a fresh governance mandate, fresh operating terms, and evidence from external validation. The intended direction is that, at V1, stewardship moves to an independent body rather than remaining with the founding team.
+V1-testnet is a test environment, not a source of permanent governance rights. Participation, test records, and test-only ASHA do not carry into V1. V1, the planned production network, requires a fresh governance mandate, fresh operating terms, and evidence from external validation. The intended direction is that, at V1, stewardship moves to an independent body rather than remaining with the founding team.
 
-Related reading:
+## Related pages
 
-- [ASHA and contribution](tokenomics/index.md)
-- [Economic Integrity](tokenomics/security.md)
-- [Network Transition & Upgrade Policy](migration.md)
+- [ASHA and contribution accounting](asha/index.md)
+- [Economic integrity](asha/security.md)
+- [Network transition and upgrade policy](migration.md)
 - [Roadmap](roadmap.md)

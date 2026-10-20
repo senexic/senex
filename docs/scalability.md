@@ -4,22 +4,13 @@ sidebar_label: Scalability
 description: How SENEX evaluates performance across local, peer, and network workloads, and what evidence is required before any capacity claim.
 ---
 
-# Scalability & Performance
-
-:::warning No public production benchmark
-SENEX does not currently claim production-scale capacity, global availability, linear scaling, a specific uptime level, or guaranteed response time. The working foundation is local-first and remains under development toward a future V1-testnet. Performance claims require reproducible evidence.
-:::
+# Scalability and performance
 
 For SENEX, scalability is not only request volume. A system must preserve owner control, predictable behavior, recoverability, and policy enforcement as participation grows. Improving throughput while weakening those properties would not meet the product objective.
 
-## Status
-
-| Status label | Scope |
-| --- | --- |
-| **Working foundation** | Establish and profile local-first behavior on supported development configurations. |
-| **V1-testnet target** | Validate a production-candidate network under controlled, test-only workloads and realistic failure conditions. |
-| **Research direction** | Broader federation, heterogeneous devices, sustained coordination, and efficient collective-intelligence workflows. |
-| **External validation required** | Independent benchmark review, resilience testing, security assessment, and capacity claims. |
+:::warning No public production benchmark
+SENEX does not currently claim production-scale capacity, global availability, linear scaling, a specific uptime level, or guaranteed response time. The working foundation is local-first; network workloads are a [V1-testnet](concepts.md#v1-testnet) target, and benchmark and capacity claims need external validation. Performance claims require reproducible evidence. Status labels are defined in [Current status](status.md#status-labels).
+:::
 
 ## Performance dimensions
 
@@ -49,7 +40,7 @@ Evaluation includes authorization, connection setup, policy checks, message exch
 
 ### Shared-service workflows
 
-Future testnet work may evaluate task dispatch, provider response, verification, and test-only accounting as one end-to-end flow. Provider settlement and real rewards are not live.
+V1-testnet work may evaluate task dispatch, provider response, verification, and test-only ASHA accounting as one end-to-end flow. Provider settlement and real rewards are not live.
 
 ### Administrative and recovery workflows
 
@@ -80,6 +71,10 @@ A credible testnet report should:
 
 ## Release gates
 
-SENEX should not publish production-scale claims until the relevant results are reproducible, independently reviewed, and tied to a named release. V1-testnet results would describe that test environment only; they would not automatically establish V1 capacity.
+SENEX should not publish production-scale claims until the relevant results are reproducible, independently reviewed, and tied to a named release. V1-testnet results describe that test environment only; they do not establish V1 capacity.
 
-See [Applications](applications.md) for workload context, [Privacy & Security](privacy/index.md) for control requirements, and [Roadmap](roadmap.md) for the staged validation sequence.
+## Related pages
+
+- [Applications and use cases](applications.md)
+- [Privacy and security](privacy/index.md)
+- [Roadmap](roadmap.md)

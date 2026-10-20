@@ -4,12 +4,12 @@ sidebar_label: Privacy controls
 description: The layers of privacy control SENEX designs around, and how a control becomes a public claim.
 ---
 
-# Privacy Controls and Technology Direction
+# Privacy controls and technology direction
 
 SENEX describes privacy technology by the protection it should provide, not by publishing a recipe for the underlying implementation. Technology names alone do not establish privacy; controls must be connected to a specific data flow, threat, and body of evidence.
 
 :::info Working foundation
-The current foundation is local-first AIA development: keep user-selected context in the user-controlled environment, require deliberate action for external exchange, and design sharing around a bounded purpose. Coverage and behavior remain under active development.
+The current foundation is local-first AIA: keep user-selected context in the user-controlled environment, require deliberate action for external exchange, and bound sharing between owners by grantee and expiry. Purpose is recorded but not yet enforced; see [Current status](../status.md).
 :::
 
 ## Control layers
@@ -31,7 +31,7 @@ Protection after disclosure has limits. Revocation can stop future authorized ac
 Future cooperation requires evidence that a request came from an authorized participant, that the approved content was not silently changed in transit, and that a relevant event can be investigated. Public documentation states these outcomes without exposing internal identity, messaging, audit, or validation constructions.
 
 :::caution V1-testnet target
-Authenticated network cooperation, consistent event records, and contribution-aware accountability are testnet targets. V1-testnet will use test-only value and is not a production privacy network.
+Authenticated network cooperation, consistent event records, and contribution-aware accountability are testnet targets. V1-testnet will use test-only ASHA and is not a production privacy network.
 :::
 
 ### Privacy-enhancing collaboration
@@ -57,4 +57,9 @@ A privacy control should move through an evidence path:
 Implementation review, adversarial testing, and deployment-specific assessment are necessary before any control is described as formally private, anonymous, tamper-proof, or suitable for regulated use.
 :::
 
-See [Privacy Assurance](mathematical_guarantees.md), [Threat Model](threat_model.md), and [Compliance](compliance.md) for the evidence and claim boundaries.
+## Related pages
+
+- [Privacy and security](index.md)
+- [Privacy assurance and evidence](mathematical_guarantees.md)
+- [Security threat model](threat_model.md)
+- [Compliance and responsible data use](compliance.md)

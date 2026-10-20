@@ -4,9 +4,9 @@ sidebar_label: GENOME
 description: GENOME is the SENEX research direction on collective intelligence formed by connected agents, governed data, computation, proofs, and outcomes.
 ---
 
-# GENOME: Collective Intelligence Research
+# GENOME: collective intelligence research
 
-GENOME is SENEX’s name for the collective intelligence that connected agents, governed data, computation, proofs, and outcomes may form. It is a long-horizon research direction: investigating whether independently controlled AIA participants can cooperate to produce useful shared intelligence without collapsing ownership, consent, or accountability into a central system.
+[GENOME](../concepts.md#genome) is SENEX's name for the collective intelligence that connected agents, governed data, computation, proofs, and outcomes may form. It is a long-horizon research direction: investigating whether independently controlled AIA participants can cooperate to produce useful shared intelligence without collapsing ownership, consent, or accountability into a central system.
 
 :::note Research direction
 GENOME builds on V1 foundations. Today it exists only as a local, privacy-preserving graph projection inside AIA. It is not a deployed network mind, a current shared model, an implemented training pipeline, or a claim of artificial general intelligence.
@@ -19,7 +19,7 @@ Personal agents can develop context that is valuable to their users, but isolate
 The public research goals are:
 
 - **Useful composition:** determine when combining independent contributions materially improves an outcome.
-- **Participant control:** preserve each participant’s authority over whether and how they take part.
+- **Participant control:** preserve each participant's authority over whether and how they take part.
 - **Bounded disclosure:** minimize what cooperation reveals about a participant or their private context.
 - **Accountable results:** retain enough evidence to examine how a shared result was produced and challenged.
 - **Safe adaptation:** prevent experimental collective behavior from silently changing user permissions or product guarantees.
@@ -28,7 +28,7 @@ These are desired properties, not claims that a particular mechanism has achieve
 
 ## Relationship to AIA and V1
 
-[AIA](aia_agents.md) is the local-first working foundation. The future [V1-testnet](intelligent_chain.md) is intended to test coordination and accountability with test-only value. A possible V1 network would be a separate, fresh-genesis production system considered only after testnet evidence and review.
+[AIA](aia_agents.md) is the local-first working foundation. [V1-testnet](intelligent_chain.md) is planned to test coordination and accountability with test-only ASHA. V1 is the planned production network, launched from a fresh genesis only after V1-testnet evidence and external review.
 
 GENOME begins beyond those milestones. It depends on mature identity, authorization, provenance, dispute handling, and operational safeguards. Keeping it post-V1 prevents an ambitious research thesis from being presented as a dependency of the initial product or network.
 
@@ -42,6 +42,8 @@ SENEX can publish:
 - aggregate, reproducible findings where disclosure is safe; and
 - the distinction between laboratory results and production evidence.
 
+Research will be evaluated through bounded questions: did cooperation improve a defined outcome? What information crossed each boundary? Could a participant refuse or withdraw? Was the result inspectable? What failed under adversarial conditions?
+
 Public documentation will not disclose security-sensitive coordination methods, internal model design, contribution scoring, network topology, training procedures, or other details that could enable reconstruction or weaken later assessment.
 
 :::warning External validation required
@@ -49,3 +51,9 @@ Claims about privacy, robustness, fairness, emergent capability, or resistance t
 :::
 
 GENOME should therefore be read as a disciplined research agenda: a question SENEX intends to investigate after its local and network foundations are established, not a feature available today.
+
+## Related pages
+
+- [Proof of Data](../thesis.md)
+- [Architecture overview](index.md)
+- [Roadmap](../roadmap.md)

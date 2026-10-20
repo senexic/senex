@@ -18,7 +18,7 @@ simulated accounting. See the
 
 The documentation uses four status labels:
 
-- **Working foundation**: implemented and covered by behaviour tests for the
+- **Working foundation**: implemented and covered by behavior tests for the
   stated scope.
 - **V1-testnet target**: required for V1-testnet and not yet qualified.
 - **Research direction**: exploratory, with no release commitment.
@@ -31,7 +31,8 @@ This repository explains product purpose, user outcomes, trust boundaries,
 current maturity, and research direction. It intentionally excludes
 implementation-sensitive material such as protocol constructions, security
 parameters, private infrastructure, economic formulas, and internal operating
-details. Economic design is published only in the SENEX white paper.
+details. Economic design is published only in the SENEX whitepaper
+(https://senexic.com/whitepaper/).
 
 The documentation is not an implementation specification and must not be used
 to infer production readiness or financial availability.

@@ -6,7 +6,7 @@ description: How one owner wallet governs many devices, how contribution roles a
 
 # Wallet, devices, and contribution roles
 
-Ownership in SENEX comes from a private wallet, not from a login or an account held by SENEXIC. One wallet can have many devices, each with its own key. This page describes that model at the capability level.
+Ownership in SENEX comes from a private [wallet](../concepts.md#wallet), not from a login or an account held by SENEXIC. One wallet can have many devices, each with its own key. This page describes that model at the capability level.
 
 :::info Working foundation
 The wallet and device model, per-device keys, sealed key storage, device revocation, and same-machine recovery are implemented and tested. Recovery on a second device and hardware-backed custody are not yet available. See [Current status](../status.md).
@@ -17,7 +17,7 @@ The wallet and device model, per-device keys, sealed key storage, device revocat
 - **The wallet is the owner.** It is the root of authority and is never replaced by a login.
 - **Each device has its own key.** The wallet signs a credential stating that the device belongs to it.
 - **Public records use a commitment.** Signed and public records carry a wallet account commitment instead of the raw wallet identifier.
-- **Devices can be revoked individually.** A revoked device can no longer sign API calls, proofs, or validator votes. Transfers are signed by the wallet root, so revoking a device does not stop them.
+- **Devices can be revoked individually.** A revoked device can no longer sign API calls, proofs, or local validator votes.
 
 ## Enrollment is not authority
 
@@ -62,7 +62,8 @@ The target for V1 is non-exportable, hardware-backed storage on every device. Th
 
 ## Recovery
 
-- An encrypted recovery kit, protected by a separate one-time secret, restores the wallet into an empty workspace through a guided ceremony. This works on the same machine today; recovery on a second device is not yet verified.
+- A four-step backup flow, offered during first-run setup and in Settings, creates an encrypted recovery kit, shows its one-time secret, and checks the saved kit and secret before it completes.
+- The recovery kit, protected by that separate one-time secret, restores the wallet into an empty workspace through a guided ceremony. This works on the same machine today; recovery on a second device is not yet verified.
 - Guardian-based recovery, in which a set of chosen guardians can rotate the wallet after a delay, is implemented as a foundation but has no owner-facing ceremony yet.
 - **Losing every usable device credential and the verified recovery kit is unrecoverable.** SENEXIC cannot restore a wallet on the owner's behalf.
 
@@ -70,8 +71,9 @@ The target for V1 is non-exportable, hardware-backed storage on every device. Th
 Custody, recovery, and revocation behavior require independent security review and cross-platform testing before V1-testnet. Nothing on this page is a custody guarantee.
 :::
 
-Related reading:
+## Related pages
 
-- [AIA](aia_agents.md)
-- [Intelligent Chain](intelligent_chain.md)
-- [Threat model](../privacy/threat_model.md)
+- [AIA: local-first personal intelligence](aia_agents.md)
+- [Intelligent Chain: coordination and accountability](intelligent_chain.md)
+- [Contribution incentives and credit routing](../asha/incentives.md)
+- [Security threat model](../privacy/threat_model.md)

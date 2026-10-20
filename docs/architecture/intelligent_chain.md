@@ -4,14 +4,14 @@ sidebar_label: Intelligent Chain
 description: The planned permissioned contribution chain that records accepted contributions among independent SENEX participants.
 ---
 
-# Intelligent Chain: Coordination and Accountability
+# Intelligent Chain: coordination and accountability
 
 The Intelligent Chain is the planned network layer for coordinating events among independent SENEX participants. Its public purpose is to make accepted actions consistently observable and accountable without turning private user context into public network data.
 
-For V1 the target is a **permissioned contribution chain**: admitted, independent validators record accepted contributions and settle them only after finality. Open, permissionless admission is a separate later decision that depends on published Sybil-resistance research.
+For V1 the target is a [permissioned contribution chain](../concepts.md#permissioned-contribution-chain): admitted, independent validators record accepted contributions and settle them only after finality. Open, permissionless admission is a separate later decision that depends on published Sybil-resistance research.
 
 :::caution V1-testnet target
-The Intelligent Chain is not a live network. Today, contribution records and prepare-and-commit finality run locally on one machine. V1-testnet is a future production-candidate environment intended for integration, security, governance, and operational testing. Any represented value will be test-only and non-monetary.
+The Intelligent Chain is not a live network. Today, contribution records and prepare-and-commit finality run locally on one machine. [V1-testnet](../concepts.md#v1-testnet) is the planned production-candidate environment for integration, security, governance, and operational testing. It will use test-only ASHA with no monetary value.
 :::
 
 ## Intended responsibilities
@@ -30,6 +30,21 @@ The network should record only what is necessary for coordination. Personal sour
 
 A future network interaction follows a simple public model:
 
+```mermaid
+sequenceDiagram
+  actor Owner
+  participant AIA as AIA client
+  participant Net as Network participants
+  participant Rec as Shared test record
+  Owner->>AIA: Authorize an action
+  Note over AIA: Prepare the minimum<br/>network-visible event
+  AIA->>Net: Submit the event
+  Note over Net: Evaluate it under<br/>the applicable rules
+  Net->>Rec: Record the accepted outcome
+  Rec-->>AIA: Result and status
+  AIA-->>Owner: Result, status, and challenge path
+```
+
 1. A participant authorizes an action through AIA or another approved client.
 2. The client prepares the minimum network-visible event needed for that purpose.
 3. Network participants evaluate the event under the applicable rules.
@@ -40,12 +55,19 @@ This description intentionally omits protocols, interfaces, timing assumptions, 
 
 ## Testnet is not production
 
-V1-testnet exists to find failures before a production decision. It may be reset, changed, paused, or retired. Test records and test-only value have no financial meaning, and participation creates no entitlement to a future asset, allocation, or network role.
+V1-testnet exists to find failures before a production decision. It may be reset, changed, paused, or retired. Test records and test-only ASHA have no financial meaning, and participation creates no entitlement to a future asset, allocation, or network role.
 
-A possible **V1** will be a separate future production network with a **fresh genesis**. It will require its own release approval, operating policies, security evidence, governance readiness, and legal review. There is no automatic migration of testnet state or value.
+**V1** is the planned production network. It starts from a **fresh genesis** and launches only after V1-testnet evidence and external review, with its own release approval, operating policies, security evidence, governance readiness, and legal review. Nothing migrates from V1-testnet.
 
 :::warning External validation required
 Network integrity, availability, privacy, resistance to manipulation, and contribution-accounting behavior must be independently tested. A production-candidate label indicates the purpose of V1-testnet, not that those properties are already proven.
 :::
 
 [GENOME](genome.md) is a separate post-V1 research direction. It should not be interpreted as a current network service or as part of the initial V1 production claim.
+
+## Related pages
+
+- [Architecture overview](index.md)
+- [Wallet, devices, and contribution roles](wallet_devices.md)
+- [Network transition and upgrade policy](../migration.md)
+- [Governance model](../governance.md)
