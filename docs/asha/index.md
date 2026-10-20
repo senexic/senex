@@ -1,10 +1,12 @@
 ---
-title: ASHA and the contribution economy
+title: ASHA and contribution accounting
 sidebar_label: ASHA and contribution
-description: How SENEX accounts for contribution today, how ASHA is designed for V1, and the gates that stand before any live use.
+description: How SENEX accounts for contribution today, how ASHA is planned for V1-testnet and V1, and the gates that stand before any live use.
 ---
 
-# ASHA and the Contribution Economy
+# ASHA and contribution accounting
+
+[ASHA](../concepts.md#asha) is the unit SENEX uses to account for contribution. This page explains how contribution is recorded today, what changes on V1-testnet, and what must be true before any live use.
 
 :::warning Simulated in the software
 In the SENEX software today, **ASHA is simulated accounting**. No amount has monetary value, no product action moves value, and no reward or provider payment is live. Nothing in these docs is an offer of any asset.
@@ -14,30 +16,24 @@ SENEX is researching how independently owned agents can recognize useful contrib
 
 ## What ASHA is for
 
-ASHA is the native unit for contribution accounting in SENEX. It is designed to record the value that governed data and computation actually add, measured at the moment of use through [Proof of Data, Proof of Computation, and Proof of Intel](../thesis.md).
+ASHA is designed to record the value that governed data and computation actually add, measured at the moment of use through Proof of Data, Proof of Computation, and Proof of Intel. The thesis behind this is on the [Proof of Data](../thesis.md) page.
 
 | Stage | How contribution is recorded | Status |
 | --- | --- | --- |
-| Today | Simulated ASHA in local experiments | **Working foundation** |
+| Today | Simulated ASHA in local experiments, with no monetary value | **Research direction** |
 | M1 kernel | Contribution points with no monetary value | **Research direction** |
 | V1-testnet | Test-only ASHA with no monetary value; state never migrates to V1 | **V1-testnet target** |
-| V1 | Any live use only after the gates below | **External validation required** |
+| V1 | Any live use only after every M4 and M5 exit gate passes | **External validation required** |
 
 ## Gates before any live use
 
-Live use of ASHA requires all of the following:
-
-- every V1-testnet qualification gate, G0 to G13, has exited;
-- independent protocol and economic reviews are complete;
-- regulatory clearance is recorded for each launch jurisdiction;
-- V1 starts from a fresh genesis, with nothing carried over from V1-testnet; and
-- independent validators hold the majority.
+Live use of ASHA requires every V1-testnet (M4) and V1 (M5) exit gate to pass, including independent protocol and economic reviews, regulatory clearance in each launch jurisdiction, a fresh genesis, and a majority of independent validators. The full list is in the [Roadmap](../roadmap.md#gates-before-any-live-use-of-asha).
 
 The V1 design has no fiat peg, no redemption promise, and no asset bridge.
 
-## Economic design and the white paper
+## Economic design and the whitepaper
 
-Supply, issuance, access, and distribution are not set in these docs. They will be described in a forthcoming edition of the SENEX white paper, after the technical, legal, and governance evidence exists. Until then, no production supply, price, allocation, reward schedule, or yield is published, and none should be inferred.
+Supply, issuance, access, and distribution are not set in these docs. They will be described in a future edition of the SENEX whitepaper, after the technical, legal, and governance evidence exists. The current edition of the whitepaper is [Edition 2026.1 (September 2026)](https://senexic.com/whitepaper/). Until then, no production supply, price, allocation, reward schedule, or yield is published, and none should be inferred.
 
 ## What the research is trying to solve
 
@@ -60,9 +56,9 @@ Supply, issuance, access, and distribution are not set in these docs. They will 
 
 These pages describe the intended accountability model. They do not publish scoring formulas, weights, abuse thresholds, settlement logic, security parameters, or operator-sensitive controls.
 
-Related pages:
+## Related pages
 
-- [Contribution incentives and reward routing](incentives.md)
+- [Contribution incentives and credit routing](incentives.md)
 - [Economic integrity](security.md)
 - [Governance model](../governance.md)
 - [Network transition and upgrade policy](../migration.md)

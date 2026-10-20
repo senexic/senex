@@ -94,9 +94,16 @@ const config: Config = {
       {
         // Retired routes stay reachable so external links never break.
         redirects: [
-          {from: '/docs/tokenomics/distribution', to: '/docs/tokenomics/'},
-          {from: '/docs/tokenomics/staking', to: '/docs/tokenomics/security/'},
+          {from: '/docs/tokenomics', to: '/docs/asha/'},
+          {from: '/docs/tokenomics/incentives', to: '/docs/asha/incentives/'},
+          {from: '/docs/tokenomics/security', to: '/docs/asha/security/'},
+          {from: '/docs/tokenomics/distribution', to: '/docs/asha/'},
+          {from: '/docs/tokenomics/staking', to: '/docs/asha/security/'},
+          {from: '/docs/innovation', to: '/docs/thesis/'},
           {from: '/docs/genome', to: '/docs/architecture/genome/'},
+          {from: '/docs/aia/architecture/secure-remote', to: '/docs/aia/'},
+          {from: '/docs/aia/contracts/overview', to: '/docs/aia/'},
+          {from: '/docs/aia/guides/contributor-guide', to: '/docs/aia/'},
         ],
       },
     ],
@@ -193,9 +200,9 @@ const config: Config = {
         {
           title: 'Research',
           items: [
-            {label: 'Proof of data', to: '/docs/thesis'},
+            {label: 'Proof of Data', to: '/docs/thesis'},
             {label: 'GENOME', to: '/docs/architecture/genome'},
-            {label: 'ASHA and contribution', to: '/docs/tokenomics'},
+            {label: 'ASHA and contribution accounting', to: '/docs/asha'},
           ],
         },
         {

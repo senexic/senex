@@ -1,25 +1,18 @@
 ---
-title: Contribution incentives and reward routing
-sidebar_label: Incentives and reward routing
+title: Contribution incentives and credit routing
+sidebar_label: Incentives and credit routing
 description: The desired behavior of SENEX contribution recognition, how credit is routed between roles, and the abuse patterns it must resist.
 ---
 
-# Contribution Incentives
+# Contribution incentives and credit routing
 
-:::warning Research direction
-Contribution rewards and provider settlement are not live. In the software, ASHA is simulated accounting with no monetary value. This page describes desired behavior, not a payout schedule, formula, or offer.
+This page describes how SENEX research wants contribution to be recognized: the behavior it should encourage, how credit is routed between roles, and the abuse patterns it must resist.
+
+:::note Research direction
+Contribution rewards and provider settlement are not live. In the software, [ASHA](../concepts.md#asha) is simulated accounting with no monetary value. This page describes desired behavior, not a payout schedule, formula, or offer. Status labels are defined in [Current status](../status.md#status-labels).
 :::
 
-The contribution-economy research asks how a network can encourage useful, authorized work while discouraging surveillance, low-quality volume, and strategic manipulation.
-
-## Status
-
-| Status label | Scope |
-| --- | --- |
-| **Working foundation** | Local-first AIA operation does not depend on rewards. Simulation can be used to inspect hypothetical coordination outcomes. |
-| **V1-testnet target** | Test-only records may help evaluate whether contribution and service events can be verified and contested safely. |
-| **Research direction** | Attribution, provider settlement, prioritization, and long-term incentive design. |
-| **External validation required** | Fairness, security, privacy, accounting, legal treatment, and resistance to coordinated abuse. |
+The research asks how a network can encourage useful, authorized work while discouraging surveillance, low-quality volume, and strategic manipulation. Local-first AIA does not depend on any of it.
 
 ## Desired outcomes
 
@@ -48,15 +41,13 @@ The research considers several outcome-level dimensions. They are not a publishe
 
 The relative importance of these dimensions remains research-sensitive and may vary by use case. Exact weights, thresholds, and detection methods are intentionally not public.
 
-## Reward routing
+## Credit routing
 
-A single task records each role separately: the requester, the executor, the validator, the block proposer, and the beneficiary. One owner's phone may request work while that owner's home computer performs it, or the phone may do the work itself.
+How credit is assigned to each role, and why all devices of one wallet count as one participant, is described once in [Wallet, devices, and contribution roles](../architecture/wallet_devices.md#who-is-credited). For data, one rule is added here:
 
-- Only an accepted contribution proof earns credit, and only for the wallet it is bound to.
-- All devices of one wallet count as one participant, so extra devices do not multiply influence or selection chances.
-- Credit for data follows the path it travelled: the first use earns discovery credit, and later uses credit back along the path. See [Proof of data](../thesis.md).
+- Credit for data follows the path it traveled: the first use earns discovery credit, and later uses credit back along the path. See [Proof of Data](../thesis.md).
 
-Today routing exists only in simulated accounting, and sending credit to a different beneficiary is not yet implemented. See [Wallet and devices](../architecture/wallet_devices.md).
+Today routing exists only in simulated accounting.
 
 ## Contribution flow
 
@@ -64,7 +55,7 @@ Today routing exists only in simulated accounting, and sending credit to a diffe
 2. A participant opts in to a bounded scope.
 3. The system records evidence needed to validate the outcome, while minimizing unnecessary disclosure.
 4. The result is checked against the relevant policy.
-5. A test-only recognition record may be created when the claim qualifies.
+5. On V1-testnet, a test-only recognition record may be created when the claim qualifies.
 6. Suspicious, incomplete, or disputed claims enter review rather than automatic settlement.
 7. The participant can inspect the outcome and use the available challenge process.
 
@@ -99,4 +90,8 @@ SENEX is not currently paying independent providers through the network. Before 
 
 Evaluation should focus on observable outcomes: false acceptance, false rejection, dispute quality, concentration, participation diversity, privacy impact, reliability, and whether useful work is encouraged without coercive data collection. Results should be published only when the methodology and limitations can be explained.
 
-See [Economic Integrity](security.md) for the abuse-resistance model and [Governance](../governance.md) for how policy decisions should be reviewed.
+## Related pages
+
+- [ASHA and contribution accounting](index.md)
+- [Economic integrity](security.md)
+- [Governance model](../governance.md)

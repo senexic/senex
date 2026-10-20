@@ -34,14 +34,14 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Research',
       collapsed: false,
-      items: ['thesis', 'innovation', 'applications', 'scalability'],
+      items: ['thesis', 'applications', 'scalability'],
     },
     {
       type: 'category',
       label: 'ASHA and contribution',
-      link: {type: 'doc', id: 'tokenomics/index'},
+      link: {type: 'doc', id: 'asha/index'},
       collapsed: true,
-      items: ['tokenomics/incentives', 'tokenomics/security'],
+      items: ['asha/incentives', 'asha/security'],
     },
     {
       type: 'category',

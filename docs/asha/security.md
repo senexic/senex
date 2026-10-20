@@ -3,20 +3,13 @@ title: Economic integrity
 description: Threats to fair contribution recognition, the defense principles SENEX evaluates, and the accountability expected of network operators.
 ---
 
-# Economic Integrity
-
-:::warning Research direction
-The current local-first foundation does not rely on a stake, a price, or an economic-security budget. In the software, ASHA is simulated accounting. This page defines evaluation goals for a possible contribution economy; it does not claim that economic security has been proven.
-:::
+# Economic integrity
 
 Economic integrity means that recognition and settlement decisions remain trustworthy even when participants have conflicting incentives. It complements, but does not replace, software security, privacy controls, operational governance, and legal accountability.
 
-## Status
-
-- **Working foundation:** simulations can expose incentive failures without placing real value at risk.
-- **V1-testnet target:** exercise test-only contribution records, policy enforcement, review, and recovery under adversarial conditions.
-- **Research direction:** identity assurance, verification, accountability, dispute handling, and concentration controls.
-- **External validation required:** threat modeling, independent security review, economic analysis, privacy assessment, and red-team testing.
+:::note Research direction
+The local-first foundation does not rely on a stake, a price, or an economic-security budget. In the software, [ASHA](../concepts.md#asha) is simulated accounting. This page defines evaluation goals; it does not claim that economic security has been proven. Test-only contribution records under adversarial conditions are a V1-testnet target, and threat modeling, economic analysis, and red-team testing need external validation. Status labels are defined in [Current status](../status.md#status-labels).
+:::
 
 ## Threat categories
 
@@ -84,11 +77,11 @@ Failures can come from malice, negligence, software defects, ambiguous policy, o
 
 ## Testnet safety boundary
 
-V1-testnet, if launched, would use test-only value. This allows failure, reset, and adversarial testing without representing test records as assets. Testnet participation would not guarantee access, rewards, balances, or influence in V1.
+V1-testnet will use test-only ASHA. This allows failure, reset, and adversarial testing without representing test records as assets. Testnet participation does not guarantee access, rewards, balances, or influence in V1.
 
 ## Evidence required before production
 
-A production decision would require evidence that:
+The V1 launch decision requires evidence that:
 
 - the end-to-end threat model matches the deployed system;
 - independent reviewers can reproduce key security findings;
@@ -100,4 +93,9 @@ A production decision would require evidence that:
 
 Detailed detection logic, thresholds, internal scoring, and response playbooks are intentionally excluded from public documentation. Security concerns should follow the project's responsible-disclosure process when one is published.
 
-See [Governance](../governance.md) for how operator policies are reviewed and changed.
+## Related pages
+
+- [ASHA and contribution accounting](index.md)
+- [Contribution incentives and credit routing](incentives.md)
+- [Governance model](../governance.md)
+- [Security threat model](../privacy/threat_model.md)
